@@ -1,3 +1,27 @@
+commit bc166f2d8a21e67b8a768d38d2e4bdbbed8df0f3
+Merge: 49c6a1b 68e0711
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed May 8 20:30:49 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 68e0711ebaecaed5071acc4798c22154722be985
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed May 8 20:25:52 2013 -0400
+
+    User jorgus on the forums:
+    http://forums.grsecurity.net/viewtopic.php?f=3&t=3446
+    discovered that the upstreamed version of enforcing RLIMIT_NPROC
+    at setuid/exec time missed an important corner case:
+    If RLIMIT_NPROC is set after a setuid occurs and the user's process
+    limit is reached elsewhere, no enforcement of RLIMIT_NPROC will
+    happen at exec time for the task with a modified RLIMIT_NPROC.
+    
+    This patch fixes that.
+
+ kernel/sys.c |    7 +++++++
+ 1 files changed, 7 insertions(+), 0 deletions(-)
+
 commit 49c6a1bc0e52099587319ff7b6edf9210f328e79
 Merge: f091f5a 908bad6
 Author: Brad Spengler <spender@grsecurity.net>

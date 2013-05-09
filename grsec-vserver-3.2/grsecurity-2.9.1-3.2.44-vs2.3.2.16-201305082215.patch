@@ -93240,7 +93240,7 @@ index 2f194e9..2c05ea9 100644
  	.priority	= 10,
  };
 diff --git a/kernel/sys.c b/kernel/sys.c
-index be5fa8b..1235bb5 100644
+index be5fa8b..fc97413 100644
 --- a/kernel/sys.c
 +++ b/kernel/sys.c
 @@ -45,6 +45,7 @@
@@ -93468,7 +93468,21 @@ index be5fa8b..1235bb5 100644
  			retval = -EPERM;
  		if (!retval)
  			retval = security_task_setrlimit(tsk->group_leader,
-@@ -1501,7 +1552,8 @@ static int check_prlimit_permission(struct task_struct *task)
+@@ -1461,6 +1512,13 @@ int do_prlimit(struct task_struct *tsk, unsigned int resource,
+ 			 */
+ 			new_rlim->rlim_cur = 1;
+ 		}
++		/* Handle the case where a fork and setuid occur and then RLIMIT_NPROC
++		   is changed to a lower value.  Since tasks can be created by the same
++		   user in between this limit change and an execve by this task, force
++		   a recheck only for this task by setting PF_NPROC_EXCEEDED
++		*/
++		if (resource == RLIMIT_NPROC)
++			tsk->flags |= PF_NPROC_EXCEEDED;
+ 	}
+ 	if (!retval) {
+ 		if (old_rlim)
+@@ -1501,7 +1559,8 @@ static int check_prlimit_permission(struct task_struct *task)
  	     cred->gid == tcred->sgid &&
  	     cred->gid == tcred->gid))
  		return 0;
@@ -93478,7 +93492,7 @@ index be5fa8b..1235bb5 100644
  		return 0;
  
  	return -EPERM;
-@@ -1724,7 +1776,7 @@ SYSCALL_DEFINE5(prctl, int, option, unsigned long, arg2, unsigned long, arg3,
+@@ -1724,7 +1783,7 @@ SYSCALL_DEFINE5(prctl, int, option, unsigned long, arg2, unsigned long, arg3,
  			error = get_dumpable(me->mm);
  			break;
  		case PR_SET_DUMPABLE:
