@@ -1,3 +1,53 @@
+commit 08a576ba141eb8885df9c9fdfedcecb9131dfd38
+Merge: 347d13b 9e7f7ca
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue May 14 18:54:01 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 9e7f7ca888e699d9081791fb60927042f0202e39
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue May 14 16:52:35 2013 -0400
+
+    disable unprivileged kernel profiling under HIDESYM, rename
+    the variable to something more appropriate
+
+ include/linux/perf_event.h |    8 ++++----
+ kernel/events/core.c       |    6 +++++-
+ kernel/sysctl.c            |    4 ++--
+ 3 files changed, 11 insertions(+), 7 deletions(-)
+
+commit 347d13b257a265a704e28e0646230642ae857091
+Merge: dd9be06 92c947d
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue May 14 17:05:22 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 92c947dcfe310d0c4bcfb68f6f06ca43fcfdca19
+Merge: 1979685 e16fea9
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue May 14 17:05:08 2013 -0400
+
+    Merge branch 'pax-stable2' into grsec-stable2
+    
+    Conflicts:
+    	drivers/tty/tty_io.c
+    	net/ipv4/tcp_input.c
+
+commit e16fea9e43ae863fabe00f770e329a87575e98d0
+Merge: 1ef16b8 88fd5f3
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue May 14 17:01:35 2013 -0400
+
+    Update to pax-linux-3.2.45-test105.patch
+    
+    Merge branch 'linux-3.2.y' into pax-stable2
+    
+    Conflicts:
+    	arch/x86/mm/init.c
+    	kernel/trace/trace_stack.c
+
 commit dd9be06a46527e4f9a50eda84dae138e192d37e8
 Merge: 0cbe9b8 1979685
 Author: Brad Spengler <spender@grsecurity.net>
