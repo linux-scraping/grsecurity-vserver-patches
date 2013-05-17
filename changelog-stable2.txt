@@ -1,3 +1,19 @@
+commit a469269abb39e54cfc39662c32b2fa5fd2a7250f
+Merge: 08a576b f1fb081
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu May 16 20:31:44 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit f1fb0815610c45f938f19c3868341d09ae657f9d
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu May 16 20:30:37 2013 -0400
+
+    Fix usercopy false positive under gcc 4.1
+
+ arch/x86/kernel/signal.c |    9 ++++++---
+ 1 files changed, 6 insertions(+), 3 deletions(-)
+
 commit 08a576ba141eb8885df9c9fdfedcecb9131dfd38
 Merge: 347d13b 9e7f7ca
 Author: Brad Spengler <spender@grsecurity.net>
