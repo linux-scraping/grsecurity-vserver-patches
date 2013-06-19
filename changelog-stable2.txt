@@ -1,3 +1,24 @@
+commit afc6c96ae91733867b3bd38340f04a5440e7f254
+Merge: b011fb2 4413dcd
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Jun 19 17:45:58 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 4413dcd8180864f36e0036c1c7edf3f06b727404
+Merge: 4945f4f 30d75a2
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Jun 19 17:45:40 2013 -0400
+
+    Merge branch 'pax-stable2' into grsec-stable2
+
+commit 30d75a248c66a76546683054768ddc6b1a1cfafa
+Merge: 7a96ff7 398cabc
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Jun 19 17:45:34 2013 -0400
+
+    Merge branch 'linux-3.2.y' into pax-stable2
+
 commit b011fb206fab26d8c63808cd2b77333b33cfcc52
 Merge: 2589cb7 4945f4f
 Author: Brad Spengler <spender@grsecurity.net>
