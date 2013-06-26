@@ -1,3 +1,72 @@
+commit 67f869f52d33ba021f499a4a1106d2386989dec3
+Merge: 4185134 e0272f0
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jun 25 19:03:50 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit e0272f02cfe4cc20756485ce82f99ba8fae18dd5
+Merge: ea55c83 7a64c90
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jun 25 19:03:39 2013 -0400
+
+    Merge branch 'pax-stable2' into grsec-stable2
+
+commit 7a64c90976856ef4d967c12257a74aa405b7217c
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jun 25 19:02:48 2013 -0400
+
+    Updated to pax-linux-3.2.47-test108.patch:
+    - fixed an ftrace regression on KERNEXEC/i386
+    - reverted the nmi changes, 3.2 doesn't need them
+    - fixed some fallout from the recent executable vmalloc changes (http://forums.grsecurity.net/viewtopic.php?t=3562#p13111)
+    - empty_zero_page can be read-only on amd64 as well
+
+ arch/x86/kernel/entry_64.S |   61 ++++++++++++++++++++-----------------------
+ arch/x86/kernel/ftrace.c   |    4 +-
+ arch/x86/kernel/head_64.S  |    1 -
+ drivers/lguest/core.c      |    2 +-
+ include/linux/vmalloc.h    |    2 +-
+ 5 files changed, 32 insertions(+), 38 deletions(-)
+
+commit 41851349ee0fbe05e5f73413054cafd71e4fcab1
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jun 25 17:49:26 2013 -0400
+
+    format the output displayed to userland
+
+ kernel/vserver/cacct_proc.h |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit c5d56d9332e8d2e588c5cf374fcda77910d29900
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jun 25 17:38:04 2013 -0400
+
+    Remove the page array from the vx_cacct struct.  It was only ever
+    (improperly) initialized and its initialized/uninitialized values
+    displayed via the /proc cacct entry.  This also removes that displaying.
+
+ include/linux/vserver/cacct_def.h |    1 -
+ kernel/vserver/cacct_init.h       |    3 ---
+ kernel/vserver/cacct_proc.h       |   12 ------------
+ 3 files changed, 0 insertions(+), 16 deletions(-)
+
+commit 2b861fd01d64a3ae4432fe59211cc4691e359fc0
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jun 25 17:31:07 2013 -0400
+
+    on 64bit systems, the 'slab' elements of the vx_cacct struct can overflow
+    under multiple large slab allocations
+    
+    change atomic_t to atomic_long_t to correct this and don't trucate their
+    values when displaying them to userland via the cacct /proc entry
+
+ include/linux/vserver/cacct_def.h |    2 +-
+ kernel/vserver/cacct_init.h       |    2 +-
+ kernel/vserver/cacct_proc.h       |   10 +++++-----
+ mm/slab_vs.h                      |    4 ++--
+ 4 files changed, 9 insertions(+), 9 deletions(-)
+
 commit 5def0a982746809b627fc4fed296cbc05c642dbd
 Merge: 86a1017 ea55c83
 Author: Brad Spengler <spender@grsecurity.net>
