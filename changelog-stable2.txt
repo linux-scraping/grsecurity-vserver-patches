@@ -1,3 +1,20 @@
+commit a978a81a680a1291d1ad7ec2ab9a1e3c97eff7ea
+Merge: d995c11 7b838c7
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jul 9 21:02:47 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 7b838c7bb44f6ab7c39040d8421af2c40c466499
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jul 9 21:00:14 2013 -0400
+
+    increase requested size for module arguments, previous size was off-by-one
+    but not an issue due to it being a fixed size in a larger fixed-size slab cache
+
+ kernel/kmod.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
 commit d995c114443f1618b389537f8757ed5effab2369
 Merge: 1559af7 dca099b
 Author: Brad Spengler <spender@grsecurity.net>
