@@ -1,3 +1,77 @@
+commit f56816002355712685ef0194110c3f39e042e57a
+Merge: 1d56bcf 671c16c
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Jul 18 11:17:27 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 671c16c479adef3ba3f041e7a684896eafa030f4
+Author: Dan Carpenter <dan.carpenter@oracle.com>
+Date:   Fri Jul 12 09:39:03 2013 +0300
+
+    Upstream commit: b2781e1021525649c0b33fffd005ef219da33926
+    
+    svcrdma: underflow issue in decode_write_list()
+    
+    My static checker marks everything from ntohl() as untrusted and it
+    complains we could have an underflow problem doing:
+    
+    	return (u32 *)&ary->wc_array[nchunks];
+    
+    Also on 32 bit systems the upper bound check could overflow.
+    
+    Cc: stable@vger.kernel.org
+    Signed-off-by: Dan Carpenter <dan.carpenter@oracle.com>
+    Signed-off-by: J. Bruce Fields <bfields@redhat.com>
+
+ net/sunrpc/xprtrdma/svc_rdma_marshal.c |   20 ++++++++++++++------
+ 1 files changed, 14 insertions(+), 6 deletions(-)
+
+commit 03f98d656f32436ab6fdac890dfb7772db30245c
+Author: Tom Tucker <tom@ogc.us>
+Date:   Wed Feb 15 11:30:00 2012 -0600
+
+    Upstream commit: cec56c8ff5e28f58ff13041dca7853738ae577a1
+    
+    svcrdma: Cleanup sparse warnings in the svcrdma module
+    
+    The svcrdma transport was un-marshalling requests in-place. This resulted
+    in sparse warnings due to __beXX data containing both NBO and HBO data.
+    
+    The code has been restructured to do byte-swapping as the header is
+    parsed instead of when the header is validated immediately after receipt.
+    
+    Also moved extern declarations for the workqueue and memory pools to the
+    private header file.
+    
+    Signed-off-by: Tom Tucker <tom@ogc.us>
+    Signed-off-by: J. Bruce Fields <bfields@redhat.com>
+
+ include/linux/sunrpc/svc_rdma.h          |    2 +-
+ net/sunrpc/xprtrdma/svc_rdma.c           |    1 +
+ net/sunrpc/xprtrdma/svc_rdma_marshal.c   |   66 +++++++----------------------
+ net/sunrpc/xprtrdma/svc_rdma_recvfrom.c  |   20 +++++----
+ net/sunrpc/xprtrdma/svc_rdma_sendto.c    |   26 ++++++-----
+ net/sunrpc/xprtrdma/svc_rdma_transport.c |   10 +----
+ net/sunrpc/xprtrdma/xprt_rdma.h          |    7 +++
+ 7 files changed, 51 insertions(+), 81 deletions(-)
+
+commit 1d56bcf0d47b20027b1c7ab9d5e29d4f22635d43
+Merge: 8dc8451 868ce42
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jul 16 20:41:59 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 868ce42c85265f226d92eb8a4f7de2323cf909e6
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jul 16 20:40:24 2013 -0400
+
+    allow viewing of ecryptfs version under SYSFS_RESTRICT
+
+ fs/sysfs/dir.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
 commit 8dc8451c028032c593c4d879a1a7f4934bc42aae
 Merge: a978a81 1260485
 Author: Brad Spengler <spender@grsecurity.net>
