@@ -1,3 +1,40 @@
+commit 11d1d0b5055c1eb301b3a3862c525377651d4872
+Merge: f568160 65937dd
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jul 21 22:24:25 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 65937dd498b405c91885085f7de8af39282f1de1
+Author: Xi Wang <xi.wang@gmail.com>
+Date:   Thu May 31 16:26:04 2012 -0700
+
+    introduce SIZE_MAX
+    
+    ULONG_MAX is often used to check for integer overflow when calculating
+    allocation size.  While ULONG_MAX happens to work on most systems, there
+    is no guarantee that `size_t' must be the same size as `long'.
+    
+    This patch introduces SIZE_MAX, the maximum value of `size_t', to improve
+    portability and readability for allocation size validation.
+    
+    Signed-off-by: Xi Wang <xi.wang@gmail.com>
+    Acked-by: Alex Elder <elder@dreamhost.com>
+    Cc: David Airlie <airlied@linux.ie>
+    Cc: Pekka Enberg <penberg@kernel.org>
+    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+    
+    Conflicts:
+    
+    	fs/ceph/snap.c
+    	include/linux/slab.h
+
+ include/drm/drm_mem_util.h |    4 ++--
+ include/linux/kernel.h     |    1 +
+ include/linux/slab.h       |    3 +--
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
 commit f56816002355712685ef0194110c3f39e042e57a
 Merge: 1d56bcf 671c16c
 Author: Brad Spengler <spender@grsecurity.net>
