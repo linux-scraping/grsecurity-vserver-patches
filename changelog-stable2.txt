@@ -1,3 +1,126 @@
+commit 8f1caba4781814cdb23fa5e7020a634e3752973c
+Merge: aa4c0db 6dcdcd3
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Aug 5 20:13:47 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 6dcdcd3d6777018c50df4fbd17c279ccf4a27d24
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Fri Aug 2 23:54:51 2013 -0400
+
+    add include
+
+ grsecurity/grsec_log.c |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit aa4c0dbdcc2d7bbaa518b879f6a2ece5aec9ad5a
+Merge: 9d2dae3 e615489
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Aug 5 19:20:57 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit e615489ea0edd10937af2f818db3262e4c7c7bf6
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Fri Aug 2 23:49:13 2013 -0400
+
+    fix compilation
+
+ include/linux/grinternal.h |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+commit 9d2dae3d6fff0f925fc97b664d7e22b1ea4187e3
+Merge: 69e9877 bdd5497
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Aug 5 19:01:22 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit bdd549716c40da0eb8962c9c81f42c0a828b68ed
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Aug 5 19:00:24 2013 -0400
+
+    Improve PaX reporting (tells when anon mapping is stack or heap)
+    Remove textrel logging option, combine into rwx logging option
+    Enhance RWX logging option to display when PT_GNU_STACK-enabled library
+    is loaded under an MPROTECTed binary
+    Enhance RWX mprotect logging to display stack/heap instead of just
+    anon mapping
+
+ fs/binfmt_elf.c            |   37 +++++++++++++++++++++++++++++++++++++
+ fs/exec.c                  |    6 +++++-
+ grsecurity/Kconfig         |   21 +++++----------------
+ grsecurity/grsec_init.c    |    4 ----
+ grsecurity/grsec_log.c     |   14 ++++++++++++++
+ grsecurity/grsec_pax.c     |   19 ++++++++++++++-----
+ grsecurity/grsec_sysctl.c  |    9 ---------
+ include/linux/binfmts.h    |    1 +
+ include/linux/grinternal.h |    2 +-
+ include/linux/grmsg.h      |    3 ++-
+ include/linux/grsecurity.h |    3 ++-
+ mm/mmap.c                  |    7 +++++++
+ mm/mprotect.c              |    2 +-
+ 13 files changed, 89 insertions(+), 39 deletions(-)
+
+commit 69e98775bce20cab5d00efb9383a5194167c840f
+Merge: 357f7da 0062d20
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Aug 5 18:00:49 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 0062d20760262f571ea73d7552f3b988b1462d02
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Aug 5 17:58:42 2013 -0400
+
+    Disable RANDKSTACK for a VirtualBox host as mentioned on the
+    gentoo-hardened bugzilla:
+    https://bugs.gentoo.org/show_bug.cgi?id=382793
+
+ security/Kconfig |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 357f7dadc14e35c58c2161838b9116937429ff65
+Merge: 9d3eacc 251569e8
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Aug 5 17:51:36 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 251569e894236166173f1428d0d1832fe796030b
+Author: Dan Carpenter <dan.carpenter@oracle.com>
+Date:   Tue Jul 30 13:23:39 2013 +0300
+
+    Upstream commit: 8cb3b9c3642c0263d48f31d525bcee7170eedc20
+    
+    net_sched: info leak in atm_tc_dump_class()
+    
+    The "pvc" struct has a hole after pvc.sap_family which is not cleared.
+    
+    Signed-off-by: Dan Carpenter <dan.carpenter@oracle.com>
+    Reviewed-by: Jiri Pirko <jiri@resnulli.us>
+    Signed-off-by: David S. Miller <davem@davemloft.net>
+
+ net/sched/sch_atm.c |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 9d3eaccb2b28105f38956798bd1b5653d97970e1
+Merge: 5df96af 94ae607
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Aug 5 16:11:41 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 94ae607f84326bd66b84e3e5b1609ba167886885
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Aug 5 16:05:41 2013 -0400
+
+    silence a warning on older gcc
+
+ grsecurity/gracl.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
 commit 5df96afa6a26415d4bee6452b3e3797473f67da9
 Merge: 2e509ee f45d2cf
 Author: Brad Spengler <spender@grsecurity.net>
