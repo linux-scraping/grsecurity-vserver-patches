@@ -1,3 +1,21 @@
+commit 171aefd6bbcc5c50b1f8d5bc72188dbe9e60220b
+Merge: 9841601 5c8a915
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Aug 20 20:17:29 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 5c8a915cc3dff9738d0a40a3b099fa8f17277ae3
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Aug 20 20:17:14 2013 -0400
+
+    Revert "Upstream commit: 58ad436fcf49810aa006016107f494c9ac9013db"
+    
+    This reverts commit e2ea872bcfef59633a5600c1da2c4ea08bb70b57.
+
+ net/netlink/genetlink.c |    7 -------
+ 1 files changed, 0 insertions(+), 7 deletions(-)
+
 commit 9841601d1b0750025b5ec6e7da16aca0c43851b9
 Merge: 26dc571 2a9496a
 Author: Brad Spengler <spender@grsecurity.net>
