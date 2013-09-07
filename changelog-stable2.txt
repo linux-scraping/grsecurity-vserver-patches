@@ -1,3 +1,30 @@
+commit 536d7907ca8ab710f2bbbb6906319c88f93da4c5
+Merge: 14fbfde 0d37569
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Fri Sep 6 20:02:29 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 0d375691d6accab268a660e738cd6d7e3d16a9a8
+Author: Jakob Bornecrantz <jakob@vmware.com>
+Date:   Thu Aug 29 02:32:53 2013 +0200
+
+    Upstream commit: 6e4dcff3adbf25acb87e74500a58e3c07bdec40f
+    
+    drm/vmwgfx: Split GMR2_REMAP commands if they are to large
+    
+    This fixes the piglit test texturing/max-texture-size
+    causing the VM to die due to a too large SVGA command.
+    
+    Signed-off-by: Jakob Bornecrantz <jakob@vmware.com>
+    Reviewed-by: Biran Paul <brianp@vmware.com>
+    Reviewed-by: Zack Rusin <zackr@vmware.com>
+    Cc: stable@vger.kernel.org
+    Signed-off-by: Dave Airlie <airlied@gmail.com>
+
+ drivers/gpu/drm/vmwgfx/vmwgfx_gmr.c |   58 +++++++++++++++++++++++-----------
+ 1 files changed, 39 insertions(+), 19 deletions(-)
+
 commit 14fbfdea80bd3a3b90c824d65bdab8dc2b46b268
 Merge: 8d64a07 a4e9394
 Author: Brad Spengler <spender@grsecurity.net>
