@@ -1,3 +1,28 @@
+commit faea6f3c3db19fd0eed2d7b70706871fdfaaeb4c
+Merge: 536d790 c9bdd44
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Sep 8 19:51:01 2013 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit c9bdd441c8d58e463af7cb1350a95b4f072d233a
+Merge: 0d37569 a8bb97c
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Sep 8 19:50:56 2013 -0400
+
+    Merge branch 'pax-stable2' into grsec-stable2
+
+commit a8bb97c7b26562d5be23bdbd37982950861325fb
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Sep 8 19:50:26 2013 -0400
+
+    - reworked __SC_LONG to care about only int and smaller types, this eliminates size overflow false positives reported by hunger
+    - fixed an uninitialized read in splice, reported by hunger
+
+ fs/splice.c              |    1 +
+ include/linux/syscalls.h |   20 ++++++++++++++------
+ 2 files changed, 15 insertions(+), 6 deletions(-)
+
 commit 536d7907ca8ab710f2bbbb6906319c88f93da4c5
 Merge: 14fbfde 0d37569
 Author: Brad Spengler <spender@grsecurity.net>
