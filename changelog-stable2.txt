@@ -1,3 +1,60 @@
+commit eef546f497ff925763bb7a1d13ae3754d0e648cf
+Merge: 8021e0d be3f353
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Nov 6 16:29:26 2013 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit be3f3539e5745da7f0a4322e0cef77d763a91793
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Nov 6 16:23:36 2013 -0500
+
+    Force on DEBUG_LIST so all users can benefit from safe linking/unlinking
+
+ security/Kconfig |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 1457cd7c50771a37f297e5d5963a003f08134793
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Nov 6 16:19:21 2013 -0500
+
+    change DEBUG_LIST WARNs back to BUGs so they can benefit from the kernel
+    bruteforce deterrence
+    
+    Conflicts:
+    
+    	lib/list_debug.c
+
+ lib/list_debug.c |   65 ++++++++++++++++++++++++++++++++++-------------------
+ 1 files changed, 42 insertions(+), 23 deletions(-)
+
+commit 8021e0d9151a8c1871715910e020d16100e40c64
+Merge: 71fada0 3b03966
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Nov 3 13:11:34 2013 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 3b039667e9f82697a42754d5e78a3772757097d5
+Author: Dan Carpenter <dan.carpenter@oracle.com>
+Date:   Tue Oct 29 22:06:04 2013 +0300
+
+    Upstream commit: 201f99f170df14ba52ea4c52847779042b7a623b
+    
+    uml: check length in exitcode_proc_write()
+    
+    We don't cap the size of buffer from the user so we could write past the
+    end of the array here.  Only root can write to this file.
+    
+    Reported-by: Nico Golde <nico@ngolde.de>
+    Reported-by: Fabian Yamaguchi <fabs@goesec.de>
+    Signed-off-by: Dan Carpenter <dan.carpenter@oracle.com>
+    Cc: stable@kernel.org
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+
+ arch/um/kernel/exitcode.c |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
 commit 71fada03d5baa47e9845039c21fdcf6e7e3a40be
 Merge: fc9b6a9 3806af3
 Author: Brad Spengler <spender@grsecurity.net>
