@@ -1,3 +1,73 @@
+commit 47f125d0dc6b4351a2072556fde22ed17a35d013
+Merge: 6e3a25f d2c1f624
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Nov 10 22:02:57 2013 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit d2c1f624b3ce5796b5ea047f2580c13f6ef1e526
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Nov 10 22:01:33 2013 -0500
+
+    Add missing include
+    
+    Conflicts:
+    
+    	fs/proc/proc_sysctl.c
+
+ fs/proc/proc_sysctl.c |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 6e3a25fef3a5a9df063a1ede9153440374881ccd
+Merge: 8986697a f37b504
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Nov 10 15:23:28 2013 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit f37b50415b86363a3e732de2c430917eeec001fd
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Nov 10 15:19:27 2013 -0500
+
+    On ARM (and other arches) we were defaulting mmap_min_addr to 64K if the LSM-based mmap_min_addr
+    was disabled in config.  This caused non-root execs to fail in some cases (via SIGKILL during ELF
+    loading).  Fix this by setting a proper default on these architectures like set on the LSM-based
+    mmap_min_addr.
+    
+    Thanks to acez from IRC for debugging.
+
+ mm/Kconfig |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 8986697a580be7080393afb967c0572143b60c2f
+Merge: eef546f de322e5
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Nov 10 14:02:24 2013 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit de322e5dc505ccfc15428aebd72dfad5d84b9a02
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Nov 10 13:54:25 2013 -0500
+
+    Compatibility fix for LXC:
+    Don't require CAP_SYS_ADMIN to modify our own net namespace's sysctl values,
+    use a CAP_NET_ADMIN check within the user namespace of the process performing the modification
+    CAP_SYS_ADMIN is still required for any other sysctl modification, including modification
+    of sysctls of a net namespace other than our own
+    
+    This allows for LXC containers to not need CAP_SYS_ADMIN to be able to set up their namespace's
+    networking
+    
+    Thanks to ncopa from IRC for testing
+    
+    Conflicts:
+    
+    	fs/proc/proc_sysctl.c
+
+ fs/proc/proc_sysctl.c |    9 +++++++--
+ 1 files changed, 7 insertions(+), 2 deletions(-)
+
 commit eef546f497ff925763bb7a1d13ae3754d0e648cf
 Merge: 8021e0d be3f353
 Author: Brad Spengler <spender@grsecurity.net>
