@@ -1,3 +1,42 @@
+commit 0489d9e549d0a9f62e3c233584a9237a527aa482
+Merge: 11cc97e aca6ec1
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Nov 26 13:07:00 2013 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit aca6ec1a3fa4e812a225e08748ee408cd6a5476e
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Nov 26 13:04:07 2013 -0500
+
+    Add system library paths to allowed areas for usermode helper calls,
+    later we will also add checks to ensure the file is owned by root
+
+ kernel/kmod.c |    5 +++--
+ 1 files changed, 3 insertions(+), 2 deletions(-)
+
+commit bf8a8329b446e9d1541b3d19e5e3cd0e04a3846f
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Nov 26 12:59:00 2013 -0500
+
+    Fix gr_policy_state -> gr_reload_state typo that clobbered the oldalloc pointer
+    causing a NULL deref on RBAC reload, reported by zakalwe
+
+ grsecurity/gracl_policy.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 31d3745f06548847d88e8a87bb63fbb00a950a3d
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Nov 25 12:01:21 2013 -0500
+
+    Conventions exist for a reason -- systemd knows better though
+    and decides to put security-sensitive system administration utilities
+    into /usr/lib/systemd in contrast to *every* other user of usermode
+    helpers.  Work around this stupidity
+
+ kernel/kmod.c |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
 commit 11cc97eed6f1a9c4e8f1c02cb75eee219bd416b5
 Merge: 757b74e c908d26
 Author: Brad Spengler <spender@grsecurity.net>
