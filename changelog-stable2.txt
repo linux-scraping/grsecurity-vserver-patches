@@ -1,3 +1,24 @@
+commit bb01459e5b5a251c391682589bd36e06348fdef3
+Merge: 0489d9e 59d80a9
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Nov 26 15:19:38 2013 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 59d80a9950846c7b3f67a5deb98d2eb1d063f3e6
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Nov 26 15:16:48 2013 -0500
+
+    Fix null deref on application of the shutdown role, reported by zakalwe
+    
+    Conflicts:
+    
+    	grsecurity/gracl_policy.c
+
+ grsecurity/gracl.c        |   58 ++++++++++++++++++++++++++++++++++++++++++++-
+ grsecurity/gracl_policy.c |   58 ++++-----------------------------------------
+ 2 files changed, 62 insertions(+), 54 deletions(-)
+
 commit 0489d9e549d0a9f62e3c233584a9237a527aa482
 Merge: 11cc97e aca6ec1
 Author: Brad Spengler <spender@grsecurity.net>
