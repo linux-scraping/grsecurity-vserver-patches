@@ -1,3 +1,47 @@
+commit e0a62446806e3456a4cd410dca5662eb5d1cb546
+Merge: bb01459 fb614dc
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Nov 30 11:04:02 2013 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+    
+    Conflicts:
+    	init/main.c
+
+commit fb614dcdf2655b2a2b286a4744a9959bfa342833
+Merge: 59d80a9 6b0b183
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Nov 30 10:54:27 2013 -0500
+
+    Should have been many more security backports in 3.2.53, but that's
+    the expected results of upstream's silent fix policy and why I do
+    my own independent backports
+    
+    Merge branch 'pax-stable2' into grsec-stable2
+    
+    Conflicts:
+    	drivers/connector/cn_proc.c
+            ^ whitespace
+    	drivers/staging/wlags49_h2/wl_priv.c
+            ^ Ben's version is whitespace-broken from copy+paste
+    	fs/ecryptfs/keystore.c
+            ^ no need to check for non-null before a kfree, kept my version
+
+commit 6b0b1836bfbfce7fb3c4c381aa68923a47920725
+Merge: 501523e 66c8d27
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Nov 30 10:49:59 2013 -0500
+
+    Update to pax-linux-3.2.53-test127.patch:
+    - forward port to 3.2.53
+    - added some missing entries to the size overflow hash table
+    - fixed a false positive intentional overflow in count_history_pages, reported by Olivier Mauras
+    
+    Merge branch 'linux-3.2.y' into pax-stable2
+    
+    Conflicts:
+    	net/compat.c
+
 commit bb01459e5b5a251c391682589bd36e06348fdef3
 Merge: 0489d9e 59d80a9
 Author: Brad Spengler <spender@grsecurity.net>
