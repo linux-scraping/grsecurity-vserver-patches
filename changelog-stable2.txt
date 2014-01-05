@@ -1,3 +1,59 @@
+commit e5d3ae68453a567abc99129f4327fb00664cc72f
+Merge: 800bb7c 21e3320
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jan 5 16:30:14 2014 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 21e33201b298da74f9b923d174d02a072cc71d96
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jan 5 16:29:52 2014 -0500
+
+    Update size_overflow hash table
+
+ tools/gcc/size_overflow_hash.data |   71 +++++++++++++++++++-----------------
+ 1 files changed, 37 insertions(+), 34 deletions(-)
+
+commit 800bb7c02b6a2b990004834bd2c7db2ffb39cff6
+Merge: f3d4ccb 0871ae4
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jan 5 12:44:16 2014 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 0871ae45aefdad82a1dbd4ff5229938f9fa907ec
+Merge: caf7b9f 633e6b5
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jan 5 12:43:58 2014 -0500
+
+    Merge branch 'pax-stable2' into grsec-stable2
+    
+    Conflicts:
+    	arch/arm/lib/getuser.S
+    	arch/arm/lib/putuser.S
+    	arch/ia64/include/asm/processor.h
+    	arch/x86/kvm/lapic.c
+    	drivers/isdn/isdnloop/isdnloop.c
+    	include/linux/random.h
+    	include/linux/sched.h
+    	kernel/ptrace.c
+    	lib/random32.c
+
+commit 633e6b5550a806435021b29919c341e940a7a035
+Merge: cc54d65 260716c
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jan 5 12:29:48 2014 -0500
+
+    Update to pax-linux-3.2.4-test131.patch
+    
+    Merge branch 'linux-3.2.y' into pax-stable2
+    
+    Conflicts:
+    	arch/x86/boot/Makefile
+    	kernel/trace/ftrace.c
+    	net/compat.c
+    	net/socket.c
+
 commit f3d4ccb5f270089b5bfc0ff9de9e96d5cc9d3c2a
 Merge: 2214374 caf7b9f
 Author: Brad Spengler <spender@grsecurity.net>
