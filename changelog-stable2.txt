@@ -1,3 +1,60 @@
+commit afecd7886672b5c5e0e9385cfe5d2409557fb973
+Merge: 6c4c70a 026e375
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Feb 3 17:29:09 2014 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 026e375ba60b6866de10b3238e083ef9d35846dc
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Feb 3 17:28:44 2014 -0500
+
+    select DEBUG_KERNEL in addition to DEBUG_LIST
+
+ security/Kconfig |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 6c4c70a1c5665a85ec4a06be55f9dadca25d8d63
+Merge: 4851b4b 4f18c21
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Feb 2 21:29:08 2014 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 4f18c21f3dbcc85b0d65746ac1ef57fe820af6ae
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Feb 2 21:23:30 2014 -0500
+
+    update copyright date
+
+ grsecurity/Makefile |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 8386e86f2202ea78b3f552c2446946d44799a46f
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Feb 2 21:23:08 2014 -0500
+
+    update copyright message
+
+ grsecurity/Makefile |   22 ++++++++++++++++------
+ 1 files changed, 16 insertions(+), 6 deletions(-)
+
+commit 4851b4b81253b81b1db792b8b31de9dd1ec85f2b
+Merge: b86147c 6ad9fb0
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Feb 1 09:50:47 2014 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 6ad9fb0b598b5e77be4578116cde54a39aada70a
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Feb 1 09:46:46 2014 -0500
+
+    disable verbose random debugging messages at boot
+
+ drivers/char/random.c |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
+
 commit b86147c7a5a33474a0863f9bc106e33a5b14f0e1
 Merge: 4dfdcb6 9a257ee
 Author: Brad Spengler <spender@grsecurity.net>
