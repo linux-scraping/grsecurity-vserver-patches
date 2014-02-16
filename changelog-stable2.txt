@@ -1,3 +1,75 @@
+commit 6739a1c3201d0ed499fcb6a3b088eb633ac45c01
+Merge: 8d5f741 86d2458
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Feb 15 19:38:56 2014 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 86d245898feca3788abd59400a6190e5d9e89439
+Merge: 9550679 08d74bb
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Feb 15 19:38:45 2014 -0500
+
+    Merge branch 'pax-stable2' into grsec-stable2
+    
+    Conflicts:
+    	arch/x86/kernel/traps.c
+    	mm/mmap.c
+    	net/ipv4/inet_diag.c
+
+commit 08d74bbf2389cb14cebeb54cf5a6f2c4413c06b6
+Merge: 3c749fc 39716f2
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Feb 15 19:35:37 2014 -0500
+
+    Update to pax-linux-3.2.55-test137.patch
+    
+    Merge branch 'linux-3.2.y' into pax-stable2
+    
+    Conflicts:
+    	mm/memory-failure.c
+    	mm/mmap.c
+
+commit 8d5f74186e731875706d1043d915ff5d10b8b990
+Merge: 6b56e41 9550679
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Feb 15 14:45:03 2014 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 9550679471718fb7082fc40068a81a580ac34eca
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Feb 15 14:43:58 2014 -0500
+
+    add note on how to disable rate limiting on log messages
+
+ grsecurity/Kconfig |    6 ++++++
+ 1 files changed, 6 insertions(+), 0 deletions(-)
+
+commit 6b56e4132212434d6a60dfb775af560e55e32fe7
+Merge: 6eaaf1b 3d39f46
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Feb 13 16:59:49 2014 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 3d39f46966283b73145304c1fa69b2ee12d39077
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Feb 13 16:50:39 2014 -0500
+
+    Force off all virtualization guest options if the autoconfig choice
+    was not for the kernel to be used for vm guests
+    likewise force off Xen if it wasn't mentioned in the autoconfig
+    
+    Conflicts:
+    
+    	arch/x86/Kconfig
+    	arch/x86/xen/Kconfig
+
+ arch/x86/Kconfig     |    1 +
+ arch/x86/xen/Kconfig |    1 +
+ 2 files changed, 2 insertions(+), 0 deletions(-)
+
 commit 6eaaf1bba8c462bcff6969d28e567751252e0962
 Merge: 0e9d85c e9c1e89
 Author: Brad Spengler <spender@grsecurity.net>
