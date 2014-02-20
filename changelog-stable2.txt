@@ -1,3 +1,50 @@
+commit 7358f8f13df8ebcd8d82ed09bcc1932b5fdc3490
+Merge: c169630 6996b07
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Feb 19 22:10:08 2014 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 6996b07c1b542eadf9a05bbe756b2a254cbff380
+Author: Theodore Ts'o <tytso@mit.edu>
+Date:   Sun Feb 16 19:29:32 2014 -0500
+
+    Upstream commit: 19ea80603715d473600cd993b9987bc97d042e02
+    
+    ext4: don't leave i_crtime.tv_sec uninitialized
+    
+    If the i_crtime field is not present in the inode, don't leave the
+    field uninitialized.
+    
+    Fixes: ef7f38359 ("ext4: Add nanosecond timestamps")
+    Reported-by: Vegard Nossum <vegard.nossum@oracle.com>
+    Tested-by: Vegard Nossum <vegard.nossum@oracle.com>
+    Signed-off-by: "Theodore Ts'o" <tytso@mit.edu>
+    Cc: stable@vger.kernel.org
+
+ fs/ext4/ext4.h |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+commit c1696307848950053f020be50396d2cc2b218192
+Merge: 6739a1c cdfe5f0
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Feb 19 20:43:44 2014 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit cdfe5f0424a44c95fc48d8ecda35ee8a23ab2ea1
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Feb 19 20:39:37 2014 -0500
+
+    While a Xen dom0 is technically a guest, it's perceived as a host by many
+    and there's really no Linux "host" for Xen, so allow PARAVIRT to be
+    enabled on "host" kernels only when Xen is selected
+    
+    Thanks to gaima on the forums for the report
+
+ arch/x86/Kconfig |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
 commit 6739a1c3201d0ed499fcb6a3b088eb633ac45c01
 Merge: 8d5f741 86d2458
 Author: Brad Spengler <spender@grsecurity.net>
