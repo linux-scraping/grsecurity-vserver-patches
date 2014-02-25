@@ -1,3 +1,21 @@
+commit 883fd599d2953db77c82c5b26abdd3c3875e887a
+Merge: ad4c7f0 a54c7d3
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Feb 24 17:20:18 2014 -0500
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit a54c7d3b74b92cd53e50d65ccf1a3103279cecbc
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Feb 24 17:16:47 2014 -0500
+
+    when IPC hardening is disabled via sysctl, we shouldn't be imposing
+    any additional restrictions
+    thanks to Mathias Krause (minipli) for the report
+
+ grsecurity/grsec_ipc.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
 commit ad4c7f06308e4c78d1e102c76cc6efe61a96b79a
 Merge: 05d5ede 04e245b
 Author: Brad Spengler <spender@grsecurity.net>
