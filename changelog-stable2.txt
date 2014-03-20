@@ -1,3 +1,93 @@
+commit a98b067bc7b3af1a45ee65473b33c026577acbb0
+Merge: 9518c7e fcab911
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Mar 19 21:53:44 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit fcab911b30166093d24e64cad30b54adb871afeb
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Mar 19 21:53:12 2014 -0400
+
+    add ktla_ktva/ktva_ktla to sparc to fix compilation
+
+ arch/sparc/include/asm/pgtable.h |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
+
+commit 9518c7ee17d5a469a959f1edc1e23f02e93b8071
+Merge: c119888 a4cc0b1
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Mar 19 21:04:03 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit a4cc0b1f96cd70448c08c00398a470072dc22c24
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Mar 19 21:01:40 2014 -0400
+
+    add ktla_ktva/ktva_ktla macros to MIPS
+
+ arch/mips/include/asm/pgtable.h |    3 +++
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+
+commit c119888c0ccd547b31f2f98436553f62e29b3df0
+Merge: db6914a 600c211
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Mar 19 20:43:12 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 600c2114235c825e36e9b85714e8be3d8bd24539
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Mar 19 20:42:35 2014 -0400
+
+    include linux/prefetch.h to fix mips64 compilation
+
+ grsecurity/gracl.c |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit db6914a04cca368cf6933fc4aa7e73147498f154
+Merge: f8bbfb5 cd45e08
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Mar 19 19:49:23 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit cd45e08e934be6363832ca553719a367b94f5736
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Mar 19 19:48:31 2014 -0400
+
+    convert back to check_heap_stack_gap in hugetlbfs code
+
+ fs/hugetlbfs/inode.c |    3 +--
+ 1 files changed, 1 insertions(+), 2 deletions(-)
+
+commit f8bbfb56393b700d0079a545123b9e2d477a02e2
+Merge: 362d3fd 6187578
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Mar 19 19:43:12 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 61875786196a3d6275e41b5d78ca7b1a6d09b62e
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Mar 19 19:42:20 2014 -0400
+
+    fix more mips compilation failures/warnings
+
+ arch/mips/cavium-octeon/dma-octeon.c |    2 +-
+ fs/hugetlbfs/inode.c                 |    3 ++-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+commit 1218f040385d88ee78fe77471d1e579c32b2d3df
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Mar 19 19:29:56 2014 -0400
+
+    fix mips64 octeon compilation due to missing local_*_unchecked() functions
+
+ arch/mips/include/asm/local.h |   14 ++++++++++++++
+ 1 files changed, 14 insertions(+), 0 deletions(-)
+
 commit 362d3fd6361ef09c7b33e122e7760235b174dbae
 Merge: ef594a7 c82fbb8
 Author: Brad Spengler <spender@grsecurity.net>
