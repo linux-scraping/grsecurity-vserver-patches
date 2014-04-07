@@ -1,3 +1,277 @@
+commit cd6eee7f8ed3c62b2893724047913d6968faa39d
+Merge: 05cfd6a 936f7cb
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 18:59:24 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 936f7cbd75a811dc46bee8b6edde793398c1a090
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 18:59:00 2014 -0400
+
+    add compiler.h to path.h
+
+ include/linux/path.h |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+commit 05cfd6ae6820159510719e9a3fecbba79e7c38f7
+Merge: e25ff91 0125643
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 18:39:26 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 01256430ba03319966146dcd8eea67521770ec5e
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 18:38:42 2014 -0400
+
+    fix tomoyo compilation
+
+ security/tomoyo/tomoyo.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit e25ff911e68a48bf54c85bc29b29a929b8d11c04
+Merge: 9dddb4e 4468372
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 17:59:01 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 4468372984e9faa4f3ccda3f6190a5b8341368ab
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 17:58:39 2014 -0400
+
+    fix tomoyo compilation with RANDSTRUCT
+
+ security/tomoyo/tomoyo.c |   22 +++++++++++-----------
+ 1 files changed, 11 insertions(+), 11 deletions(-)
+
+commit 9dddb4e1443c462b0a236bd8b47ba5bb2994c871
+Merge: cc6b2e5 9380e23f
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 17:51:51 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 9380e23fd600b64d5d1fb6920b4cf29c197075c0
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 17:50:38 2014 -0400
+
+    fix tomoyo compilation with RANDSTRUCT
+
+ security/tomoyo/file.c |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+commit cc6b2e5ed98dbfee73d99ccd8287f6eee7164f68
+Merge: 60326b62 d711e2f
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 17:44:26 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit d711e2f0ef5392b6a555411d92fd662d0f0647d9
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 17:43:47 2014 -0400
+
+    Fix tomoyo compilation with RANDSTRUCT
+
+ security/tomoyo/file.c |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 60326b62913375d793f32ffa3d39d0bd507a308f
+Merge: 320f36d d4886c9
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 17:23:29 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit d4886c92a23273e0362c0660a987745410460d55
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 17:23:09 2014 -0400
+
+    fix apparmor compilation with RANDSTRUCT
+
+ security/apparmor/file.c |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 320f36de09b959f7aaaf74de709548fae9394887
+Merge: 5140a5e dbfdaec
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 17:12:04 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit dbfdaec0a04221391d22ad10651d2a31bfe38c0c
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 17:11:40 2014 -0400
+
+    fix apparmor compilation with RANDSTRUCT
+
+ security/apparmor/lsm.c |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 5140a5ef9881c624b49e55a01d9a78a701598ded
+Merge: 7844dc1 3b6b32e
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 16:59:27 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 3b6b32eafd2f773f971c777174328b98198d6ca2
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 16:58:35 2014 -0400
+
+    add __randomize_layout to more important structures
+
+ include/linux/binfmts.h    |    4 ++--
+ include/linux/filter.h     |    2 +-
+ include/linux/path.h       |    2 +-
+ include/linux/security.h   |    2 +-
+ include/linux/tty_driver.h |    2 +-
+ include/net/af_unix.h      |    2 +-
+ include/net/sock.h         |    4 ++--
+ 7 files changed, 9 insertions(+), 9 deletions(-)
+
+commit 7844dc1adef59e5742b30957f74d247af32bbaeb
+Merge: 472b4a9 d563f80f
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 09:30:34 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit d563f80fb8783c3fb4d571dd9e72f35497ac3db1
+Merge: 63680ac d46def7
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 09:30:06 2014 -0400
+
+    Merge branch 'pax-stable2' into grsec-stable2
+    
+    Conflicts:
+    	arch/x86/boot/compressed/misc.c
+    	tools/gcc/Makefile
+
+commit d46def7c02984f06b0a9479b186569763afd4613
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 09:26:52 2014 -0400
+
+    Update to pax-linux-3.2.56-test147.patch:
+    - actually applied the changes meant for test146 :P
+    - updated the hash database for external modules, by Emese
+    - fixed regression in gcc plugin compilation when compiling with ccache, reported by ncopa
+    - proper fix for 309944be296efbb3ca4737d12ef49d2ba97cbecc upstream
+    - fixed plugin compilation under gcc 4.5, reported by Emese Revfy
+    - Emese added support for out-of-tree modules for the size overflow plugin, fixes https://bugs.gentoo.org/show_bug.cgi?id=505594
+
+ arch/x86/boot/compressed/misc.c          |    7 ++-
+ scripts/gcc-plugin.sh                    |    4 +-
+ tools/gcc/Makefile                       |   12 +++-
+ tools/gcc/gcc-common.h                   |    1 +
+ tools/gcc/generate_size_overflow_hash.sh |    5 ++-
+ tools/gcc/size_overflow_hash.data        |    1 +
+ tools/gcc/size_overflow_hash_aux.data    |   83 ++++++++++++++++++++++++++++++
+ tools/gcc/size_overflow_plugin.c         |   25 ++++++---
+ 8 files changed, 122 insertions(+), 16 deletions(-)
+
+commit 63680ac0edd9a72295df07b792096d4f84570e78
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Apr 6 08:34:08 2014 -0400
+
+    This reverts commit 31dee23268ac47eaaafacb186229bc14fb84fa9b.
+
+ net/socket.c |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 472b4a9735067a88053568e3404d3c130d282694
+Merge: 4b4c71c d20a625
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 3 16:44:54 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit d20a625ed406f6bb5c9be627993798b0e259284d
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 3 16:42:54 2014 -0400
+
+    change clearing char to 0xff
+
+ arch/x86/boot/compressed/misc.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 4b4c71c2c0e821e0a845323cf221f2c797891776
+Merge: e76eaca 9f64dbb
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 3 16:36:15 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 9f64dbb310f8d4e1f893b0d85e3d50c077cfdb86
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 3 16:33:52 2014 -0400
+
+    Zero out the difference between file size and mapped size for kernel
+    elf sections mapped by the loader -- proper fix by pipacs for:
+    http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=309944be296efbb3ca4737d12ef49d2ba97cbecc
+
+ arch/x86/boot/compressed/misc.c |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+commit 3f69f5d8d98b1641e897c09b88bd86f07843ba0d
+Author: Pablo Neira <pablo@netfilter.org>
+Date:   Tue Apr 1 19:38:44 2014 +0200
+
+    Upstream commit: 8b7b932434f5eee495b91a2804f5b64ebb2bc835
+    
+    netlink: don't compare the nul-termination in nla_strcmp
+    
+    nla_strcmp compares the string length plus one, so it's implicitly
+    including the nul-termination in the comparison.
+    
+     int nla_strcmp(const struct nlattr *nla, const char *str)
+     {
+            int len = strlen(str) + 1;
+            ...
+                    d = memcmp(nla_data(nla), str, len);
+    
+    However, if NLA_STRING is used, userspace can send us a string without
+    the nul-termination. This is a problem since the string
+    comparison will not match as the last byte may be not the
+    nul-termination.
+    
+    Fix this by skipping the comparison of the nul-termination if the
+    attribute data is nul-terminated. Suggested by Thomas Graf.
+    
+    Cc: Florian Westphal <fw@strlen.de>
+    Cc: Thomas Graf <tgraf@suug.ch>
+    Signed-off-by: Pablo Neira Ayuso <pablo@netfilter.org>
+    Signed-off-by: David S. Miller <davem@davemloft.net>
+
+ lib/nlattr.c |   10 ++++++++--
+ 1 files changed, 8 insertions(+), 2 deletions(-)
+
+commit e76eacab70511104fb9e967da2aa8739aed1a42d
+Merge: 245e30a 06d25ed
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 3 16:23:53 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 06d25eda5d0c46184e9454900a2b6fd3fde8e5a3
+Author: YOSHIFUJI Hideaki / 吉藤英明 <yoshfuji@linux-ipv6.org>
+Date:   Wed Apr 2 12:48:42 2014 +0900
+
+    Upstream commit: 77bc6bed7121936bb2e019a8c336075f4c8eef62
+    
+    isdnloop: Validate NUL-terminated strings from user.
+    
+    Return -EINVAL unless all of user-given strings are correctly
+    NUL-terminated.
+    
+    Signed-off-by: YOSHIFUJI Hideaki <yoshfuji@linux-ipv6.org>
+    Signed-off-by: David S. Miller <davem@davemloft.net>
+
+ drivers/isdn/isdnloop/isdnloop.c |    6 ++++++
+ 1 files changed, 6 insertions(+), 0 deletions(-)
+
 commit 245e30aa194f1cc3116ae2ff2c5a47c49aa272d5
 Merge: a516008 0857ee8
 Author: Brad Spengler <spender@grsecurity.net>
