@@ -1,3 +1,28 @@
+commit 3b447c6a21e06e68d1cd149386bafd58c9ff3666
+Merge: c5ee847 2013ce2
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Fri Apr 18 21:09:17 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 2013ce2b93ee8217b2e2133d1a5ef60034ebda47
+Merge: e0ce59a 3187a79
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Fri Apr 18 21:09:07 2014 -0400
+
+    Merge branch 'pax-stable2' into grsec-stable2
+
+commit 3187a798b98447aba2a4b3eacbd8b459c05c4a54
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Fri Apr 18 21:08:32 2014 -0400
+
+    Update to pax-linux-3.2.57-test149.patch:
+    - temporarily reverted the previous fix of the overflow plugin as it triggers more problems than it solves
+
+ tools/gcc/size_overflow_hash.data |    1 -
+ tools/gcc/size_overflow_plugin.c  |    4 ++--
+ 2 files changed, 2 insertions(+), 3 deletions(-)
+
 commit c5ee847f83d203da24a0b06bb69b172125fe1940
 Merge: 7c36156 e0ce59a
 Author: Brad Spengler <spender@grsecurity.net>
