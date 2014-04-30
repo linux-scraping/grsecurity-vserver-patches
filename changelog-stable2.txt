@@ -1,3 +1,51 @@
+commit 15b6f3b04b0b47ac8c3da01ac00b2895611484db
+Merge: c1cf9d5 b8f4923
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Apr 29 20:24:04 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit b8f492389e6c99083e043ace700dfeed56879043
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Apr 29 20:23:46 2014 -0400
+
+    update gitignore
+
+ tools/gcc/.gitignore |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit c1cf9d5ccd8643c0039c5cc7e1a03d718b7bacb2
+Merge: 93b5196 21f5c3f
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Apr 29 20:20:47 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 21f5c3f135f6387d594f583853919d32455b9f3c
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Apr 29 20:20:28 2014 -0400
+
+    update size_overflow hash table
+
+ tools/gcc/size_overflow_hash.data |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 16c404220e8f5c1970cdbb94a1ec8501bb837ce7
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Apr 29 18:55:26 2014 -0400
+
+    Include backported virtio SCSI driver from Debian, thanks to Ben Hutchings
+
+ drivers/scsi/Kconfig         |    8 +
+ drivers/scsi/Makefile        |    1 +
+ drivers/scsi/virtio_scsi.c   |  838 ++++++++++++++++++++++++++++++++++++++++++
+ drivers/virtio/virtio.c      |    5 +-
+ drivers/virtio/virtio_ring.c |   60 +++-
+ include/linux/virtio.h       |    5 +
+ include/linux/virtio_ids.h   |    1 +
+ include/linux/virtio_scsi.h  |  125 +++++++
+ 8 files changed, 1035 insertions(+), 8 deletions(-)
+
 commit 93b5196277ad56966ee591b4f6da14ec698a8406
 Merge: b5bb1f6 2be3acc
 Author: Brad Spengler <spender@grsecurity.net>
