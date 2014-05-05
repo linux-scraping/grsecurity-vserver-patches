@@ -1,3 +1,36 @@
+commit 00a70a082a5364ac563217e4ffd4b9fc68e7d438
+Merge: 0fdf11a ee26ef6
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon May 5 18:21:24 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit ee26ef6fe974459d501d2583a7d3d605f1073934
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon May 5 18:21:03 2014 -0400
+
+    backport fix (there is no n_tty_data in 3.2)
+
+ drivers/tty/n_tty.c |    9 ++++-----
+ 1 files changed, 4 insertions(+), 5 deletions(-)
+
+commit 0fdf11a370d6a58f94fe794ab4d2f195ee4b36c5
+Merge: 881701a e74da1f
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon May 5 18:13:42 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit e74da1fee4e283ea2b847a5176bb97453e661e11
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon May 5 18:12:30 2014 -0400
+
+    Backport fix for heap overflow in the tty layer, CVE-2014-0196
+    http://bugzillafiles.novell.org/attachment.cgi?id=588355
+
+ drivers/tty/n_tty.c |   10 ++++++++++
+ 1 files changed, 10 insertions(+), 0 deletions(-)
+
 commit 881701aea08187edcadd7c15cb962ef42915c939
 Merge: 64b6d90 f06aa00
 Author: Brad Spengler <spender@grsecurity.net>
