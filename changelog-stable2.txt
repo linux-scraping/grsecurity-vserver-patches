@@ -1,3 +1,19 @@
+commit 9a600138e74b10f05c3ae6a31fb75501e9396069
+Merge: 00a70a0 fba8cb4
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue May 6 17:05:09 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit fba8cb418be22f02333b5fe4d7ddfdbba3f1f82a
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue May 6 17:04:33 2014 -0400
+
+    fix compilation with older gcc (redefinition of pid_alive)
+
+ include/linux/sched.h |   26 ++++++++++++--------------
+ 1 files changed, 12 insertions(+), 14 deletions(-)
+
 commit 00a70a082a5364ac563217e4ffd4b9fc68e7d438
 Merge: 0fdf11a ee26ef6
 Author: Brad Spengler <spender@grsecurity.net>
