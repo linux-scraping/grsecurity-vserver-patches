@@ -1,3 +1,118 @@
+commit d70327c2841f8c5d8fc5e5eaaa1dac6de67cc248
+Merge: e0d463d 578116b
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat May 10 19:44:51 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 578116be14bf158bc2e340952bd8a28afa5cc0f9
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat May 10 17:31:17 2014 -0400
+
+    fix compilation
+
+ include/linux/thread_info.h |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+commit e0d463d4a6b619835681f383c2a3a1c76090f13b
+Merge: a73a878 e62d306
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat May 10 17:29:30 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit e62d30699e81b93e65213ee3275e7c8e855ad7ed
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat May 10 17:24:47 2014 -0400
+
+    force DEBUG_STACKOVERFLOW on on grsec kernels and make it
+    trigger the bruteforce logic
+    
+    Conflicts:
+    
+    	arch/powerpc/kernel/irq.c
+    	arch/x86/kernel/irq_32.c
+    	arch/x86/kernel/irq_64.c
+
+ arch/mips/kernel/irq.c    |    4 ++++
+ arch/powerpc/kernel/irq.c |    3 +++
+ arch/x86/kernel/irq_32.c  |    4 ++++
+ arch/x86/kernel/irq_64.c  |    3 +++
+ security/Kconfig          |    1 +
+ 5 files changed, 15 insertions(+), 0 deletions(-)
+
+commit a73a878d4fa27ea46e932b4c3316944cd30b3191
+Merge: 9f46c37 495a3bb
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat May 10 16:47:34 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 495a3bb3c5488519188cf3da926aff5ea0eac2eb
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat May 10 16:46:48 2014 -0400
+
+    always perform the stack overflow check, not just for non-fixed size copies
+
+ fs/exec.c                   |   16 +---------------
+ include/linux/thread_info.h |    8 ++++++++
+ 2 files changed, 9 insertions(+), 15 deletions(-)
+
+commit 9f46c375c7584c273d370aec6af85d04937bce7a
+Merge: 6b0e72b 434193e
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat May 10 16:29:48 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 434193e5563a158139ecdb479865728af57f048a
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat May 10 16:26:25 2014 -0400
+
+    compile fix
+
+ fs/proc/stat.c |   12 ++++++++++++
+ 1 files changed, 12 insertions(+), 0 deletions(-)
+
+commit 6b0e72b747404dabd53440e06689884d9a65d3fe
+Merge: d8e953e d44fc35
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat May 10 16:11:55 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit d44fc35cea3e921ce6c0e6de16b539dafbb1e99b
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat May 10 15:52:44 2014 -0400
+
+    improve PAX_USERCOPY on x86 to detect attempted copies when the current
+    stack has overflowed
+
+ arch/x86/kernel/dumpstack_32.c |    2 +-
+ arch/x86/kernel/dumpstack_64.c |    2 +-
+ fs/exec.c                      |   17 ++++++++++++++++-
+ 3 files changed, 18 insertions(+), 3 deletions(-)
+
+commit d8e953ea9485ab7a96819d6dfd0d29cf2481ec98
+Merge: 8ab7dfe 7997ac4
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat May 10 15:33:27 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 7997ac44201621628c670827226bb393ed4b0187
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat May 10 15:29:13 2014 -0400
+
+    relax /proc/stat restrictions
+    
+    Conflicts:
+    
+    	fs/proc/stat.c
+
+ fs/proc/stat.c |   49 +++++++++++++++++++++++++++----------------------
+ 1 files changed, 27 insertions(+), 22 deletions(-)
+
 commit 8ab7dfe4159b63f0cde6f9a24032bf747df0ae6d
 Merge: caad01b df5c216
 Author: Brad Spengler <spender@grsecurity.net>
