@@ -1,3 +1,19 @@
+commit 156cf0b547ed94a09d05a1e88971c036c84d4e8e
+Merge: d70327c 1bd029b
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 11 12:41:08 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 1bd029b6a18a5f97ee1284a61bef4cd3381e0d35
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 11 12:40:46 2014 -0400
+
+    fix compilation, reported by mcp
+
+ fs/proc/stat.c |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
 commit d70327c2841f8c5d8fc5e5eaaa1dac6de67cc248
 Merge: e0d463d 578116b
 Author: Brad Spengler <spender@grsecurity.net>
