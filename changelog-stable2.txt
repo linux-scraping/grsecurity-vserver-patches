@@ -1,3 +1,19 @@
+commit 3abb4f82413111b0402aab61e65120080ce21696
+Merge: 9518ad9 63466f8
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Fri May 30 21:39:02 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 63466f8f452573994ad1373c54de36ff73b711f3
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Fri May 30 21:38:31 2014 -0400
+
+    fix DEBUG_STACKOVERFLOW properly, reported by jeff on IRC
+
+ arch/x86/kernel/irq_64.c |   15 ++++++++-------
+ 1 files changed, 8 insertions(+), 7 deletions(-)
+
 commit 9518ad969c1bbaa76506e6b7e8b199770df810ca
 Merge: 795d125 44f972e
 Author: Brad Spengler <spender@grsecurity.net>
