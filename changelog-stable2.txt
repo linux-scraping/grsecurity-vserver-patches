@@ -1,3 +1,36 @@
+commit 9f796727509de75824c400e67e10d04e392931c9
+Merge: 33cf20c 6bbd397
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jun 3 07:14:40 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit 6bbd3978f194a25e2317f229cdf3985e9daee35c
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jun 3 07:13:32 2014 -0400
+
+    mark KSTACKOVERFLOW as broken on 3.2 until it is fixed.  Wasn't caught by
+    my automated testing due to a bug in my build scripts
+
+ grsecurity/Kconfig |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 33cf20c3f3c81b2df77101987c61c65eac8cabad
+Merge: e109a86 f0006cb
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jun 3 06:40:07 2014 -0400
+
+    Merge branch 'grsec-stable2' into grsec-vserver-stable2
+
+commit f0006cb4e64a5083cd3def0718c3cf9522a81102
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jun 3 06:29:37 2014 -0400
+
+    add another populate_stack under switch_mm()
+
+ mm/mmu_context.c |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
 commit e109a8618b073f60ff7af44deca7fb27d9301fb7
 Merge: c474803 e684d26
 Author: Brad Spengler <spender@grsecurity.net>
