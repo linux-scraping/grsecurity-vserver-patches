@@ -1,3 +1,52 @@
+commit d476c2679c98ee19cd00f7dcbc8b5cf349ead259
+Merge: e67230b 0f33199
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jun 29 18:14:26 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 0f3319928845248bff4ec7a52a8574c1eaef951d
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jun 29 18:11:08 2014 -0400
+
+    revert PCI_ANY_ID change to fix problem with vgaswitcheroo as reported by
+    /dev/random here:
+    https://forums.grsecurity.net/viewtopic.php?f=3&t=3989
+
+ include/linux/mod_devicetable.h |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit e67230b345d835a3f2decf4b67d6ed55614208e3
+Merge: 2f6b721 ac3cb18
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jun 29 09:35:21 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit ac3cb18307b0e019e2d0df3e81f793ef5f128174
+Author: Zhaowei Yuan <zhaowei.yuan@samsung.com>
+Date:   Wed Jun 18 14:33:59 2014 +0800
+
+    Upstream commit: 1539fb9bd405ee32282ea0a38404f9e008ac5b7a
+    
+    drm: fix NULL pointer access by wrong ioctl
+    
+    If user uses wrong ioctl command with _IOC_NONE and argument size
+    greater than 0, it can cause NULL pointer access from memset of line
+    463. If _IOC_NONE, don't memset to 0 for kdata.
+    
+    Signed-off-by: Zhaowei Yuan <zhaowei.yuan@samsung.com>
+    Reviewed-by: David Herrmann <dh.herrmann@gmail.com>
+    Cc: <stable@vger.kernel.org>
+    Signed-off-by: Dave Airlie <airlied@redhat.com>
+    
+    Conflicts:
+    
+    	drivers/gpu/drm/drm_drv.c
+
+ drivers/gpu/drm/drm_drv.c |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
 commit 2f6b72156a882240cc08e6993f72fa8ac90594ba
 Merge: 3e10a74 74a3bdf
 Author: Brad Spengler <spender@grsecurity.net>
