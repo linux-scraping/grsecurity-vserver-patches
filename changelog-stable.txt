@@ -1,3 +1,43 @@
+commit 96ecb76f6c867024c682d1fb6fc525184ff545a7
+Merge: 82cd431 eced417
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Jul 10 00:07:20 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit eced417d64539e2cdd3488aa6380a868345f9bff
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Jul 10 00:07:03 2014 -0400
+
+    compile fix
+
+ net/ipv6/addrconf.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 82cd43145287aabe1d933487a05d5d1d54964eb6
+Merge: 3a92364 f36ba2a
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Jul 9 23:20:02 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit f36ba2a503a679875cb23d5ae46c6dabb5ea0804
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Jul 9 23:14:19 2014 -0400
+
+    Allow /proc/net/if_inet6 to be visible by non-root users -- it is needed
+    on Fedora 20 and the contents are similar to those of the already-allowed
+    /proc/net/dev
+    
+    Conflicts:
+    
+    	fs/proc/proc_net.c
+    	net/ipv6/addrconf.c
+
+ fs/proc/proc_net.c  |   22 +++++++++++++++++++++-
+ net/ipv6/addrconf.c |   11 +++++++++--
+ 2 files changed, 30 insertions(+), 3 deletions(-)
+
 commit 3a92364ec35076954ce8ac94c91a7e72bbfbb902
 Merge: 56719e5 58f7da4
 Author: Brad Spengler <spender@grsecurity.net>
