@@ -1,3 +1,51 @@
+commit 8d3957c5dd5282aec96031f31d8b3d5b46f7b0b1
+Merge: 39a75d6 0b43139
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jul 13 11:33:11 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 0b4313939d0db675558bb5320fa3c981c0e26d44
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jul 13 11:30:26 2014 -0400
+
+    fix another DMA-on-stack case
+    
+    Conflicts:
+    
+    	drivers/usb/host/hwa-hc.c
+
+ drivers/usb/host/hwa-hc.c |    9 +++++++--
+ 1 files changed, 7 insertions(+), 2 deletions(-)
+
+commit 39a75d62b59876be9a36cff234dfd940d19929cc
+Merge: c7ba0e6 3cd4f74
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jul 13 11:12:01 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 3cd4f741d3fd7c8242c0449f63961f5ec3032058
+Author: Daniel Gimpelevich <daniel@gimpelevich.san-francisco.ca.us>
+Date:   Wed Aug 21 01:43:19 2013 -0700
+
+    hso: Fix stack corruption on some architectures
+    
+    As Sergei Shtylyov explained in the #mipslinux IRC channel:
+    [Mon 2013-08-19 12:28:21 PM PDT] <headless> guys, are you sure it's not "DMA off stack" case?
+    [Mon 2013-08-19 12:28:35 PM PDT] <headless> it's a known stack corruptor on non-coherent arches
+    [Mon 2013-08-19 12:31:48 PM PDT] <DonkeyHotei> headless: for usb/ehci?
+    [Mon 2013-08-19 12:34:11 PM PDT] <DonkeyHotei> headless: explain
+    [Mon 2013-08-19 12:35:38 PM PDT] <headless> usb_control_msg() (or other such func) should not use buffer on stack. DMA from/to stack is prohibited
+    [Mon 2013-08-19 12:35:58 PM PDT] <headless> and EHCI uses DMA on control xfers (as well as all the others)
+    
+    Signed-off-by: Daniel Gimpelevich <daniel@gimpelevich.san-francisco.ca.us>
+    Acked-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+    Signed-off-by: David S. Miller <davem@davemloft.net>
+
+ drivers/net/usb/hso.c |    6 +++++-
+ 1 files changed, 5 insertions(+), 1 deletions(-)
+
 commit c7ba0e6f4ce9eff1c8b0da99f8cf1651e7f33758
 Merge: 96ecb76 ecbc937
 Author: Brad Spengler <spender@grsecurity.net>
