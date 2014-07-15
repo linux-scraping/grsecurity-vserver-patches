@@ -1,3 +1,19 @@
+commit ded7362e313ee8e4f6521ffddbdbea69943d2e19
+Merge: 3b32269 c86a686
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jul 15 16:44:35 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit c86a686a85e05591c1f88282f3e22f48802c911a
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Jul 15 16:40:36 2014 -0400
+
+    fix more DMA-on-stack cases
+
+ drivers/media/dvb/dvb-usb/dvb-usb-firmware.c |   37 ++++++++++++++++++-------
+ 1 files changed, 26 insertions(+), 11 deletions(-)
+
 commit 3b3226946ff77259cd8c67116e61a355df094f41
 Merge: 8d3957c 862b3b4
 Author: Brad Spengler <spender@grsecurity.net>
