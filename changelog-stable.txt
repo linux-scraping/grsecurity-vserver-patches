@@ -1,3 +1,84 @@
+commit 09b45abce00ef2552733e1bd0002197f0c82d7d0
+Merge: f654020 939438a
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Aug 3 10:21:34 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 939438a85bbd7b4b4cf5256a9d1696c5de45ed10
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Aug 3 10:20:05 2014 -0400
+
+    compile fix
+
+ grsecurity/grsum.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit f6540208b58a94ec716180ea492e80965e2b57c8
+Merge: 68d3088 f603c29
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Aug 3 10:15:56 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit f603c29fb37dfa40aaaab54756561819eeaf2270
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Aug 3 10:15:31 2014 -0400
+
+    fix retval
+
+ grsecurity/grsum.c |    8 ++++++--
+ 1 files changed, 6 insertions(+), 2 deletions(-)
+
+commit 68d30880101dbd75e8d4ec344eefbf97fc132d6e
+Merge: 7666bee 6e4064d
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Aug 3 10:04:44 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 6e4064de66c5d780617b50f2ec7586d485e833c3
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Aug 3 10:00:44 2014 -0400
+
+    Mark the right declarations __read_only
+
+ grsecurity/gracl_policy.c |    6 +++---
+ grsecurity/grsec_init.c   |    6 +++---
+ 2 files changed, 6 insertions(+), 6 deletions(-)
+
+commit 87f27b2d88b0f6da9dd581ec23e7e3ea3c8cc52a
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Aug 3 09:52:39 2014 -0400
+
+    While on x86/x64 scatterlists can be created from kernel image buffers,
+    on sparc64 this is apparently invalid and causes a system hang.
+    Convert gr_usermode, gr_system_sum, and gr_system_salt back to using
+    memory allocated at init.
+
+ grsecurity/gracl_policy.c |   60 ++++++++++++++++++++++----------------------
+ grsecurity/grsec_init.c   |   14 ++++++++++
+ grsecurity/grsum.c        |   37 +++++++++++++--------------
+ 3 files changed, 62 insertions(+), 49 deletions(-)
+
+commit 940d0f2a492432cbe173439a6badd36fb2f356d1
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Aug 2 18:21:02 2014 -0400
+
+    cleanup
+
+ arch/sparc/include/asm/thread_info_64.h |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 22492b445ac341dd4bb7f80df5499f7a70819f17
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Aug 2 18:18:48 2014 -0400
+
+    Fix KSTACKOVERFLOW compilation on sparc64
+
+ arch/sparc/include/asm/thread_info_64.h |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
 commit 7666bee124cfe9f21b92c88c71c3d94b49dce551
 Merge: 220ac48 3c38d5b7
 Author: Brad Spengler <spender@grsecurity.net>
