@@ -1,3 +1,100 @@
+commit 5fd854c42e3f286dd0368f2f17a99e92bdcf0be2
+Merge: 45b082c 77c5c6e
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Sep 8 21:00:10 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 77c5c6e41bc486fc92de079882048cdfeb88558b
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Sep 8 20:59:54 2014 -0400
+
+    compile fix
+
+ drivers/media/dvb/dvb-usb/cinergyT2-fe.c |    1 -
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+
+commit 45b082cd346ce012b3e894daf9ec08b523d48894
+Merge: f67e449 e35a79f
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Sep 8 20:36:38 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit e35a79ff36f8d1822a12f64784e886260bf472e4
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Sep 8 20:36:10 2014 -0400
+
+    fix several more cases of DMA-on-stack
+
+ drivers/media/dvb/dvb-usb/cinergyT2-fe.c |  179 ++++++++++++++++++++++--------
+ 1 files changed, 132 insertions(+), 47 deletions(-)
+
+commit f67e449edf21cbd55b80900d22412f737f22718c
+Merge: 6e77e44 c5584f6
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Sep 8 19:29:09 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit c5584f68b79036abf8b615a828c83844babeef86
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Sep 8 19:28:37 2014 -0400
+
+    compile fix
+
+ drivers/media/dvb/dvb-usb/cinergyT2-core.c |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+commit 6e77e44d299f2272dda0146884b157cd54f3064f
+Merge: 42023f7 4da9127
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Sep 8 19:11:31 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 4da912717213ddce20610d7c73a166ff19943bd6
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Sep 8 19:09:58 2014 -0400
+
+    Fix yet another DMA-on-stack case in the driver for the DVB-T TerraTec
+    Cinergy T2, reported by sainz76 on the forums.
+
+ drivers/media/dvb/dvb-usb/cinergyT2-core.c |   90 +++++++++++++++++++++++-----
+ 1 files changed, 74 insertions(+), 16 deletions(-)
+
+commit 42023f79587d6dfc069f4611382779036bc49ef1
+Merge: a0990f5 188e7e3
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Sep 8 18:43:25 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 188e7e319dfbd150d27d1d7451ebad1834000ce5
+Author: Mathias Krause <mathias.krause@secunet.com>
+Date:   Mon Sep 8 13:13:02 2014 +0200
+
+    pax: defer KERNEXEC instrumentation in IRQ return path
+    
+    The EFI runtime service to relocate, well, the EFI runtime services
+    (SetVirtualAddressMap) gets called with a physical mapping and with
+    interrupts enabled. If an IRQ triggers while we're executing code in
+    the EFI region, the KERNEXEC instrumentation will set the MSB of the
+    return address. But this address is actually located in the lower 4GB,
+    thereby setting the MSB makes the CPU #GP as the return address just
+    got non-canonical.
+    
+    Fix this by deferring the KERNEXEC instrumentation for the iret path
+    until alternatives are applied. This allows this early EFI runtime
+    service calls to get interrupted not only by IRQs but also NMIs and
+    activates the instrumentation before any userland code will be
+    executed -- even before the other APs are started.
+    
+    Signed-off-by: Mathias Krause <mathias.krause@secunet.com>
+
+ arch/x86/kernel/entry_64.S |   19 +++++++++++++++++++
+ 1 files changed, 19 insertions(+), 0 deletions(-)
+
 commit a0990f55e8e0b3887af6c4ea2e0d94012e5f1dab
 Merge: fd5fd73 224a98d
 Author: Brad Spengler <spender@grsecurity.net>
