@@ -1,3 +1,19 @@
+commit d378f3328af1c6d07b78b00b326f0c96dcbb1dc2
+Merge: 868c5cb 0163725
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Sep 15 08:30:46 2014 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 0163725f9f230f4b58641a875a7de730afc80c74
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon Sep 15 08:30:05 2014 -0400
+
+    exempt atomic_[inc|add]_return_unchecked() from size_overflow
+
+ arch/x86/include/asm/atomic.h |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
 commit 868c5cb4d22eca7f92dc9cb0a3273088e2864c70
 Merge: 5307328 9056786
 Author: Brad Spengler <spender@grsecurity.net>
