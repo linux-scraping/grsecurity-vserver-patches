@@ -1,3 +1,19 @@
+commit d46ce14845c7990ef694dc6bcde9389292648dbe
+Merge: c77241c 2ce01ec
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Nov 2 07:48:50 2014 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 2ce01ec7e2fa13e6127ead8d3ff2b9f25328a3eb
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Nov 2 07:48:21 2014 -0500
+
+    Apply https://bugs.debian.org/cgi-bin/bugreport.cgi?msg=12;filename=ipv6-reuse-ip6_frag_id-from-ip6_ufo_append_data.patch;att=1;bug=766195
+
+ net/ipv6/udp.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
 commit c77241ccb5677f68479738d571a9d1f2dacb7027
 Merge: 808c8e8 6d89098
 Author: Brad Spengler <spender@grsecurity.net>
