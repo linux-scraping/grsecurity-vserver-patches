@@ -1,3 +1,72 @@
+commit b3219624447e5cf2532d894ea5fdba9cc6a51e08
+Merge: 7a1ff9f 0925f49
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Nov 23 14:34:04 2014 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 0925f49db68edea999a3dffaba8a2d4622c7accb
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Nov 23 14:08:10 2014 -0500
+
+    move our make rpm chmods to %pre
+
+ scripts/package/mkspec |   22 ++++++++++++----------
+ 1 files changed, 12 insertions(+), 10 deletions(-)
+
+commit 7a1ff9fd7e1a6ca959be6e9beaf58c63ec4e8069
+Merge: 4293a6b 345f3be
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Nov 23 09:56:06 2014 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 345f3be3c9beb7182fd9654917783f9a13566057
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Nov 23 09:54:26 2014 -0500
+
+    Harden network settings by default since most users won't bother
+    modifying /etc/sysctl.conf.
+    
+    Specifically we're now setting rp_filter = 1 and accept_redirects = 0
+
+ net/ipv4/devinet.c  |    6 ++++--
+ net/ipv6/addrconf.c |    4 ++--
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+
+commit 4293a6b7e3901952567dcd62a7ee1d7bf75c1836
+Merge: 3f0ef27 ea07aca
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Nov 22 12:01:01 2014 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit ea07aca49c23771bf88fea479b505997856e45b9
+Author: Laura Abbott <lauraa@codeaurora.org>
+Date:   Sat Dec 21 01:03:06 2013 +0100
+
+    ARM: 7931/1: Correct virt_addr_valid
+    
+    The definition of virt_addr_valid is that virt_addr_valid should
+    return true if and only if virt_to_page returns a valid pointer.
+    The current definition of virt_addr_valid only checks against the
+    virtual address range. There's no guarantee that just because a
+    virtual address falls bewteen PAGE_OFFSET and high_memory the
+    associated physical memory has a valid backing struct page. Follow
+    the example of other architectures and convert to pfn_valid to
+    verify that the virtual address is actually valid. The check for
+    an address between PAGE_OFFSET and high_memory is still necessary
+    as vmalloc/highmem addresses are not valid with virt_to_page.
+    
+    Cc: Will Deacon <will.deacon@arm.com>
+    Cc: Nicolas Pitre <nico@linaro.org>
+    Acked-by: Will Deacon <will.deacon@arm.com>
+    Signed-off-by: Laura Abbott <lauraa@codeaurora.org>
+    Signed-off-by: Russell King <rmk+kernel@arm.linux.org.uk>
+
+ arch/arm/include/asm/memory.h |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
 commit 3f0ef27ecd43c4b6477da7c9cf493ab18154b78e
 Merge: 665946e a8d06d0
 Author: Brad Spengler <spender@grsecurity.net>
