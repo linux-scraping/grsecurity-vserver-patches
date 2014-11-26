@@ -1,3 +1,19 @@
+commit 6a40885f8444e36567d3c5c9d30672e1314c70f0
+Merge: 4ecdd6c fc12e99
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Nov 26 00:59:17 2014 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit fc12e990aeafab216e27899a3d91b8a6b62d99ce
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Nov 26 00:57:50 2014 -0500
+
+    add the exclusion back
+
+ scripts/package/mkspec |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
 commit 4ecdd6c861e1e7802a349b22a8bc970fb55d8bb4
 Merge: 985bd1a 0096b98
 Author: Brad Spengler <spender@grsecurity.net>
