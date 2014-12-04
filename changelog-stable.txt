@@ -1,3 +1,28 @@
+commit ed29b7877504231cec771b5daf276c63424840f5
+Merge: 6a40885 e9af243
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Dec 2 07:26:34 2014 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit e9af2431bc80e5761a320f0fd0ff7390ebb067a6
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Dec 2 07:26:25 2014 -0500
+
+    change name
+
+ security/Kconfig |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit c3fe56a44a2e747e512f49eed7c4a02c5e09f987
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Dec 2 07:24:49 2014 -0500
+
+    add Hyper-V to auto-configuration
+
+ security/Kconfig |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+
 commit 6a40885f8444e36567d3c5c9d30672e1314c70f0
 Merge: 4ecdd6c fc12e99
 Author: Brad Spengler <spender@grsecurity.net>
