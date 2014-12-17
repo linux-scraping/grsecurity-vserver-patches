@@ -1,3 +1,46 @@
+commit f9f19d8670d871e007bb3404acceb617fd9e0d67
+Merge: 6eb90f5 f0141de
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Dec 16 18:40:13 2014 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit f0141de20a94881331289127085a3c37ee055eb1
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Dec 16 17:18:16 2014 -0500
+
+    Force support on for user extended attributes for filesystems that currently
+    don't default to on to match up with other filesystems like ext4/xfs that do.
+    
+    We'll need this to make an upcoming addition to the paid kernel packages work
+    without any additional configuration by the user.
+    
+    If there's a particular mountpoint you don't want to have user extended attributes
+    enabled on for whatever reason, the "nouser_xattr" mount option will honor it.
+
+ fs/ext2/super.c     |    8 +++-----
+ fs/ext3/super.c     |    8 +++-----
+ fs/reiserfs/super.c |    4 ++++
+ 3 files changed, 10 insertions(+), 10 deletions(-)
+
+commit 72dae807fa5ee98838514b3e98893f016d312314
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Dec 14 19:47:05 2014 -0500
+
+    propagate count type
+
+ drivers/gpu/drm/ttm/ttm_tt.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 5e14f99f5da1d757a48818411de3717e4f121aa4
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Dec 14 19:46:01 2014 -0500
+
+    compile fix
+
+ include/drm/ttm/ttm_page_alloc.h |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
 commit 6eb90f521244a409332b219c76e4a368b9d8ddb5
 Merge: 71df0cf 0cd9e3b
 Author: Brad Spengler <spender@grsecurity.net>
