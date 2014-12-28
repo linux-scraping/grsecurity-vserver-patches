@@ -1,3 +1,38 @@
+commit c15c331a29818a1acc1c2e169cfcb7f4ab778f50
+Merge: 873d730 d5d88b9
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Dec 27 17:39:35 2014 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit d5d88b95dc4e700e694fe96816a83c008e865c67
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Dec 27 17:24:20 2014 -0500
+
+    remove the %preun step, we don't want to remove old kernels installed from the paid kernel service
+
+ scripts/package/mkspec |    7 -------
+ 1 files changed, 0 insertions(+), 7 deletions(-)
+
+commit 873d73068e9774d9c85097b1e3649440e54807f9
+Merge: a296d24 cc567a0
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Dec 23 23:32:13 2014 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit cc567a0ec5edd4ec396ec7926e1a9df48ada4926
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Dec 23 23:28:21 2014 -0500
+
+    invoke new-kernel-pkg directly instead of using installkernel, which fixes some
+    issues beta testers experienced with the new paid kernel service.
+    
+    suggested by a sponsor
+
+ scripts/package/mkspec |   17 +++++++++++------
+ 1 files changed, 11 insertions(+), 6 deletions(-)
+
 commit a296d24a8a995ca6c2ac7a77a298306271a3ebd6
 Merge: d05377a 56c9ae9
 Author: Brad Spengler <spender@grsecurity.net>
