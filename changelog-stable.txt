@@ -1,3 +1,31 @@
+commit daa56dbbd16f6043d6175604bcc33522b85dba7f
+Merge: d52082d f2986d3
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Dec 30 23:57:50 2014 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit f2986d3f727a4a226a2b73b96e185a0cbae32288
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Dec 30 23:57:25 2014 -0500
+
+    resync with PaX
+
+ arch/x86/kernel/entry_64.S |   10 +++++-----
+ arch/x86/kvm/emulate.c     |    2 +-
+ 2 files changed, 6 insertions(+), 6 deletions(-)
+
+commit d52082dc0371ed3752e6e104c7d1272a1162d6e7
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Dec 28 09:33:30 2014 -0500
+
+    resync with vs2.3.2.17 -- just some cosmetic changes in /proc files
+
+ fs/proc/array.c             |    4 ++--
+ kernel/vserver/cvirt_proc.h |    2 +-
+ localversion-vserver        |    2 +-
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
 commit c15c331a29818a1acc1c2e169cfcb7f4ab778f50
 Merge: 873d730 d5d88b9
 Author: Brad Spengler <spender@grsecurity.net>
