@@ -1,3 +1,19 @@
+commit fb5599fff8f53c7cde72222ebb465ed1a8c6b476
+Merge: 7e73928 3f4ac90
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jan 11 09:49:23 2015 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 3f4ac907f2f59cbcaeaeedbea222241309d28b0b
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jan 11 09:46:33 2015 -0500
+
+    squelch a harmless compiler warning
+
+ drivers/iommu/amd_iommu.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
 commit 7e73928b67af14303881612148bca7f4b60fe895
 Merge: 144d847 9759066
 Author: Brad Spengler <spender@grsecurity.net>
