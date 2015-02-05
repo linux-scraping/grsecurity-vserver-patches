@@ -1,3 +1,44 @@
+commit 88f5b8d81ce15b41ada05539e9ba7f87ac20edd5
+Merge: f9eadbe ebb75bc
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Feb 5 08:19:20 2015 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit ebb75bc888f1613c4e332a48b883b463e492ed63
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Feb 5 08:09:18 2015 -0500
+
+    Fix another upstream bug, rcu lock imbalance causing OOPses since
+    an upstream 3.2 backport.
+    Reported and fixed here: https://lkml.org/lkml/2015/1/17/71
+    Presumably will be fixed in 3.2.67, but since we have users hitting
+    it already, let's fix it now.
+    Thanks to rfree@mempo.org for the oops reports
+
+ fs/dcache.c |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+commit f9eadbecb58c378c0c9972408eb843931f306285
+Merge: 0644f71 8d6f07e
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Feb 5 08:10:48 2015 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 8d6f07efbb671a150592ce9d80c8d3befe1b2fe4
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Feb 5 08:09:18 2015 -0500
+
+    Fix another upstream bug, rcu lock imbalance causing OOPses since
+    an upstream 3.2 backport.
+    Reported and fixed here: https://lkml.org/lkml/2015/1/17/71
+    Presumably will be fixed in 3.2.67, but since we have users hitting
+    it already, let's fix it now.
+
+ fs/dcache.c |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
 commit 0644f712562f8885962b6fc0e5b8904e684acb50
 Merge: ab4d856 d14bff6
 Author: Brad Spengler <spender@grsecurity.net>
