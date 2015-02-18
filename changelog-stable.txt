@@ -1,3 +1,32 @@
+commit 1b61913a2602da8517a4e56901a8c579de23dc3e
+Merge: 4e0cd8d f1986bd
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Feb 17 21:30:07 2015 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit f1986bd9a8a034a02336c795443a4bb243ebefcb
+Author: David Jeffery <djeffery@redhat.com>
+Date:   Thu Feb 12 16:45:31 2015 +0000
+
+    Don't leak a key reference if request_key() tries to use a revoked keyring
+    
+    If a request_key() call to allocate and fill out a key attempts to insert the
+    key structure into a revoked keyring, the key will leak, using memory and part
+    of the user's key quota until the system reboots. This is from a failure of
+    construct_alloc_key() to decrement the key's reference count after the attempt
+    to insert into the requested keyring is rejected.
+    
+    key_put() needs to be called in the link_prealloc_failed callpath to ensure
+    the unused key is released.
+    
+    Signed-off-by: David Jeffery <djeffery@redhat.com>
+    Signed-off-by: David Howells <dhowells@redhat.com>
+    Signed-off-by: James Morris <james.l.morris@oracle.com>
+
+ security/keys/request_key.c |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
 commit 4e0cd8d2501cb21d598e0cb2a3d0a367fd85bf95
 Merge: 437e18a 379b0a4
 Author: Brad Spengler <spender@grsecurity.net>
