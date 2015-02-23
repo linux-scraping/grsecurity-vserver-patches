@@ -1,3 +1,117 @@
+commit 188e49fb254c73f49cbca2be570729a85d3a95fa
+Merge: 30144b8 591d1e1
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Feb 22 11:37:06 2015 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 591d1e124e23119ba7ac837049ec926b81027078
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Feb 22 11:36:26 2015 -0500
+
+    use compat_u64 in the compat code
+
+ include/linux/gracl_compat.h |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 30144b8dcccb161bf73c607c68da75fe8834e59b
+Merge: e986d92 3ad8ef5
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Feb 22 09:49:56 2015 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 3ad8ef598deeac0b1023d2235fb3e2aa5f91de3c
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Feb 22 09:48:42 2015 -0500
+
+    Require version 3.1 gradm to load RBAC
+
+ grsecurity/gracl_compat.c |    3 +--
+ grsecurity/gracl_policy.c |    3 +--
+ 2 files changed, 2 insertions(+), 4 deletions(-)
+
+commit e986d925eab436bff8ef7add5e325f967cb25085
+Merge: f92d874 929a335
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Feb 22 08:54:57 2015 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 929a3359b424a4e27abe7584c2180eb72f95a1bb
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Feb 22 08:54:26 2015 -0500
+
+    use div_u64_rem for 32-bit archs
+
+ include/linux/gracl.h |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+commit f92d874f010d11c23def066fcdbe6fe20bd4426f
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Feb 22 08:54:26 2015 -0500
+
+    use div_u64_rem for 32-bit archs
+
+ include/linux/gracl.h |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+commit 10f45ded26d9f579f95c4a30169fe18caa59f588
+Merge: 03ba33a 76cbe68
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Feb 22 07:38:40 2015 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 76cbe6847478796139d1a25b1a0993a48665fa2f
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Feb 22 07:37:57 2015 -0500
+
+    compile fix when grsec is disabled
+
+ grsecurity/grsec_disabled.c |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+
+commit 03ba33a43d1c46c4e0c5f148edb8b3d8695c0ca4
+Merge: 147fa6b 6acea99
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Feb 22 07:26:55 2015 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 6acea99126791882cdf990aa581726c449164a91
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Feb 22 07:25:43 2015 -0500
+
+    Add support for 64-bit inodes: as this breaks compatibility with gradm, bump
+    the grsecurity version to 3.1
+
+ fs/namei.c                   |    8 ++--
+ grsecurity/gracl.c           |   65 +++++++++++++++++++++++++----------------
+ grsecurity/gracl_policy.c    |    6 ++--
+ grsecurity/gracl_segv.c      |   17 +++++++++--
+ grsecurity/grsec_disabled.c  |    4 +-
+ include/linux/gracl.h        |   14 ++++----
+ include/linux/gracl_compat.h |    6 ++--
+ include/linux/grsecurity.h   |    5 ++-
+ 8 files changed, 76 insertions(+), 49 deletions(-)
+
+commit 147fa6b0f25fc84e841430bed07783910a0e95c4
+Merge: ce1ad0b 743d5c1
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Fri Feb 20 17:59:50 2015 -0500
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 743d5c1d30694671da6492b8aef89172ed30dd48
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Fri Feb 20 17:58:04 2015 -0500
+
+    clamp RLIMIT_NOFILE based on sysctl instead of enforcing a 1024 limit in userland
+
+ grsecurity/gracl.c |   19 ++++++++++++++++---
+ 1 files changed, 16 insertions(+), 3 deletions(-)
+
 commit ce1ad0b924770b2867e293c7ab5b095ad9991b69
 Merge: 876aa32 1614915
 Author: Brad Spengler <spender@grsecurity.net>
