@@ -1,3 +1,23 @@
+commit 2b518e8b5a847a2c44b306340a6f70364cc00214
+Merge: 0eeda27 25a83e0
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Mar 25 16:57:32 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 25a83e0374bad9573e80786c13cf12475d911400
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Wed Mar 25 16:53:50 2015 -0400
+
+    Revert an incorrect fix from Dan Rosenberg for a btrfs heap overflow which
+    preserved the vulnerability in some cases.
+    https://lkml.org/lkml/2011/2/9/147
+    
+    Thanks to eswierk from the forums for spotting this!
+
+ fs/btrfs/ioctl.c |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
 commit 0eeda27a64136c64c04d6f875a5029e1387cbe27
 Merge: 5ab9fe3 7accd89
 Author: Brad Spengler <spender@grsecurity.net>
