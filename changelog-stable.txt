@@ -1,3 +1,153 @@
+commit c875e11fc3199fef4f79a13bf3284cafa65a712d
+Merge: de24dc9 798dc80
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 17:36:40 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 798dc8036640b1e950095d9e3850f906b93adc36
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 17:36:28 2015 -0400
+
+    fix typo
+
+ kernel/trace/ring_buffer.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit de24dc9e65ec8b467e8021e78bec37777fa5b087
+Merge: 78f11cc ba24a61
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 17:26:25 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit ba24a613272baf988cc7c73d9fce42e75dc1f636
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 17:25:47 2015 -0400
+
+    backport:
+    - fixed some REFCOUNT false positives in the tracing ring buffer code, reported by metarox (https://forums.grsecurity.net/viewtopic.php?f=3&t=4186)
+
+ kernel/trace/ring_buffer.c |   12 ++++++------
+ 1 files changed, 6 insertions(+), 6 deletions(-)
+
+commit 78f11cced24f24c85131b43091672e4582eb0125
+Merge: 3acaca6 75bdf38
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 09:38:39 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 75bdf38048377ce8bfd0ab24d66af39156c7248c
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 09:38:13 2015 -0400
+
+    move backported cpu check
+
+ arch/x86/kernel/cpu/common.c |   20 ++++++++++----------
+ 1 files changed, 10 insertions(+), 10 deletions(-)
+
+commit 3acaca64ebee043a2b3ac850f494a73138212842
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 09:38:13 2015 -0400
+
+    move backported cpu check
+
+ arch/x86/kernel/cpu/common.c |   20 ++++++++++----------
+ 1 files changed, 10 insertions(+), 10 deletions(-)
+
+commit 7306836516d4176b46fd46878032eb548816aa90
+Merge: fa4e398 d08d78e
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 09:30:00 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit d08d78ee07545b194e2be3e3f6177b1614f0f6cc
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 09:29:48 2015 -0400
+
+    update size_overflow hash table
+
+ .../size_overflow_plugin/size_overflow_hash.data   |    5 ++++-
+ 1 files changed, 4 insertions(+), 1 deletions(-)
+
+commit aba4ad6f4d69a6a6c8bbd36e5e3e09dc300410d2
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 08:57:55 2015 -0400
+
+    update size_overflow hash
+
+ .../size_overflow_plugin/size_overflow_hash.data   |    6 +++++-
+ 1 files changed, 5 insertions(+), 1 deletions(-)
+
+commit fa4e3984f4cd498c19593e3ee2feb4ba43fd24da
+Merge: a1366b2 57a8a7e
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 08:28:19 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 57a8a7ec36812bf64d043c0df171c03bafb2541f
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 08:28:06 2015 -0400
+
+    compile fix
+
+ arch/x86/kernel/cpu/common.c |    4 ----
+ 1 files changed, 0 insertions(+), 4 deletions(-)
+
+commit a1366b236af012c9068391c4459602e70cd8145f
+Merge: 8a2c22f 8d71a56
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 08:18:06 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 8d71a5684d4d64a8c9332c20d60fb24eb722e76b
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 08:17:32 2015 -0400
+
+    Backport fix for crash with old PAGEEXEC method and PSE, reported by Merlin
+
+ arch/x86/kernel/cpu/common.c |   10 ++++++++++
+ 1 files changed, 10 insertions(+), 0 deletions(-)
+
+commit 8a2c22f63503d2599f1e719a7023bde8d3ea4301
+Merge: c725751 d26a970
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 08:04:13 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit d26a970bc14a1cf9305a927cd39fdc973f832640
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 08:03:59 2015 -0400
+
+    update size_overflow hash table
+
+ .../size_overflow_plugin/size_overflow_hash.data   |    8 ++++++--
+ 1 files changed, 6 insertions(+), 2 deletions(-)
+
+commit c72575137211ad99403688781abbe7216c1eef48
+Merge: b009d6f ca92e78
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 08:02:57 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit ca92e78bdd6e85b3ec771c9b815dd0a480a8f475
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Thu Apr 2 08:02:11 2015 -0400
+
+    fix the infiniband vuln properly, since nobody seems to know how
+    access_ok actually works and that it's the correct fix here
+
+ arch/sparc/include/asm/uaccess_32.h  |    1 +
+ arch/sparc/include/asm/uaccess_64.h  |    5 +++++
+ drivers/infiniband/core/uverbs_cmd.c |    3 +++
+ 3 files changed, 9 insertions(+), 0 deletions(-)
+
 commit b009d6f9aa0de0e334b0e9ac9cab338945ebe867
 Merge: bbef6e3 b131768
 Author: Brad Spengler <spender@grsecurity.net>
