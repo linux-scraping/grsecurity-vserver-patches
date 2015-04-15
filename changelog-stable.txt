@@ -1,3 +1,19 @@
+commit e3e89db263158b4667ee57914943f92c1673906e
+Merge: c57c77b 87f3e57
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Apr 14 22:57:42 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 87f3e57baff74dc19fe69e50b1804fc2d233ee1c
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Tue Apr 14 22:56:35 2015 -0400
+
+    fix escaping of unix domain paths added in previous patch
+
+ net/unix/af_unix.c |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
 commit c57c77bccda8c9b489c08032f845deee4a0be9b8
 Merge: c0648e6 86fbe56
 Author: Brad Spengler <spender@grsecurity.net>
