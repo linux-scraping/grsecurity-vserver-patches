@@ -1,3 +1,141 @@
+commit 12dd953c98b51d7cfd9ea021f4f87b04336b7e63
+Merge: e597900 577b968
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 10 11:16:45 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 577b968ed6fcf3d9e3b6de0e45e3d6cf80af15c9
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 10 11:16:18 2015 -0400
+
+    Update size_overflow hash table
+
+ .../size_overflow_plugin/size_overflow_hash.data   |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+commit e5979001b2edf5d40d6d577898332de09ee36cbc
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 10 11:16:18 2015 -0400
+
+    Update size_overflow hash table
+
+ .../size_overflow_plugin/size_overflow_hash.data   |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+commit 1cda14f822ab8daa86678855f0b0096d7da39c3f
+Merge: 28ed22b 6178e17
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 10 10:32:08 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 6178e173f21d9ab1121c90db3c1bfa3655c52285
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 10 10:31:54 2015 -0400
+
+    Update size_overflow hash table
+
+ .../size_overflow_plugin/size_overflow_hash.data   |    3 +++
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+
+commit 28ed22b8d5d916236af1a70ba08b2a998581904f
+Merge: 68cf5c2 fcf8bbb
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 10 10:30:54 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit fcf8bbbf9a815d2431fe664b917dbf44271bba35
+Merge: 70fc60d 6b71bd6
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 10 10:30:41 2015 -0400
+
+    Merge branch 'pax-stable' into grsec-stable
+
+commit 6b71bd614295b6a79680327058140dad7eafc9cd
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 10 10:30:25 2015 -0400
+
+    Update to pax-linux-3.2.69-test173.patch
+
+ arch/x86/kernel/traps.c  |    2 +-
+ include/linux/compiler.h |    8 ++++----
+ kernel/trace/ftrace.c    |    2 --
+ 3 files changed, 5 insertions(+), 7 deletions(-)
+
+commit 68cf5c2d1ca123619ac25bb920239509bb0dac99
+Merge: 84467e7 70fc60d
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 10 09:52:07 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 70fc60ddae5089ff56db4eafee75cfa64b63a25a
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 10 09:51:57 2015 -0400
+
+    compile fix
+
+ arch/x86/kernel/traps.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 84467e7a3c02c4b62b0eea39c7e6dab46e03ac6a
+Merge: 761277e 90052e9
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 10 08:57:44 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 90052e90ee56d8def1a775eef8c1dafa10d17c4a
+Merge: 321b4a8 a6ec535
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 10 08:57:35 2015 -0400
+
+    Merge branch 'pax-stable' into grsec-stable
+    
+    Conflicts:
+    	fs/exec.c
+    	fs/udf/inode.c
+    	net/ipv4/ip_sockglue.c
+
+commit a6ec535ffc2a318ee17e3aa818204f5c0c05b527
+Merge: f1cc348 d9f31c5
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 10 08:49:43 2015 -0400
+
+    Merge branch 'linux-3.2.y' into pax-stable
+    
+    Conflicts:
+    	include/linux/compiler.h
+    	kernel/trace/ftrace.c
+
+commit 761277ee9a5fb0921be84895e8345e9820f21a2c
+Merge: 61b38c0 321b4a8
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat May 9 19:57:14 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 321b4a805257805ab97a4d215c3497ed0523d970
+Author: Jason A. Donenfeld <Jason@zx2c4.com>
+Date:   Wed May 6 15:09:40 2015 +0200
+
+    usbnet: avoid integer overflow in start_xmit
+    
+    transfer_buffer_length is of type u32. It's therefore wrong to assign it
+    to a signed integer. This patch avoids the overflow.
+    
+    It's worth noting that entry->length here is a long; perhaps it would be
+    beneficial at somepoint to change this to be unsigned as well, if
+    nothing else relies on its signedness for error conditions or the like.
+    
+    Signed-off-by: Jason A. Donenfeld <Jason@zx2c4.com>
+    Signed-off-by: David S. Miller <davem@davemloft.net>
+
+ drivers/net/usb/usbnet.c |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
 commit 61b38c072fa0b48d6efa087dd67a611b037e7d43
 Merge: 58b5d88 69d7ed7
 Author: Brad Spengler <spender@grsecurity.net>
