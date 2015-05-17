@@ -1,3 +1,19 @@
+commit f356bc0ee349145403a06687b8873f6848960ecc
+Merge: aab625e a8d8e81
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 17 14:23:18 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit a8d8e8106a40b50db4f5bc89f03cae550f5a4071
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun May 17 14:22:18 2015 -0400
+
+    Fix an ICE in the RANDSTRUCT plugin on GCC 5.1 reported and fixed by pipacs
+
+ tools/gcc/randomize_layout_plugin.c |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
 commit aab625eedc23c403a426c67bf6ee91cd5126070f
 Merge: 12dd953 e0e4c89
 Author: Brad Spengler <spender@grsecurity.net>
