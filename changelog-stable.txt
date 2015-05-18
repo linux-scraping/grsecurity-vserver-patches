@@ -1,3 +1,40 @@
+commit e1b1bc8e543b7d40a994024d5509abf698a0d9ff
+Merge: 10f9261 9610345
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon May 18 18:01:35 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 96103451e5718d3cce1f504f553413b58d16639f
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon May 18 18:01:08 2015 -0400
+
+    Remove __inline__ from .c files, let the compiler decide
+
+ grsecurity/gracl.c       |   12 ++++++------
+ grsecurity/gracl_alloc.c |    4 ++--
+ grsecurity/gracl_segv.c  |    6 +++---
+ grsecurity/grsec_sock.c  |    4 ++--
+ 4 files changed, 13 insertions(+), 13 deletions(-)
+
+commit 10f92617c30318d6f4202d1f73ca6a21a002fa91
+Merge: f356bc0 0de1c3c
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon May 18 17:56:09 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 0de1c3c5cf33ca3ec42428568aaddde0b73e2a35
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Mon May 18 17:54:21 2015 -0400
+
+    Actually wire up use of the RANDSTRUCT attributes for GCC 5.1, otherwise we'd
+    ICE on some Xen PARAVIRT code (and would miss explicit randomization and would
+    break other code)
+
+ include/linux/compiler-gcc5.h |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+
 commit f356bc0ee349145403a06687b8873f6848960ecc
 Merge: aab625e a8d8e81
 Author: Brad Spengler <spender@grsecurity.net>
