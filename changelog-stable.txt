@@ -1,3 +1,41 @@
+commit 8766b521101e4b1c837f9849256bcdea693187f0
+Merge: 2356428a 37b1602
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jul 5 07:30:31 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 37b1602e9cccf4f35c495c51f6173a2eefddb4ec
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sun Jul 5 07:26:54 2015 -0400
+
+    Fix format string vulns in config_item_set_name (used by configfs)
+    Thanks to Nicolas Iooss for the report!
+    
+    Conflicts:
+    
+    	drivers/usb/gadget/configfs.c
+
+ fs/configfs/item.c       |    4 ++--
+ include/linux/configfs.h |    2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 2356428a9158593148e1e10eb53bf25fd0ffbb35
+Merge: 30b82c4 7dbba86
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Jul 4 11:16:13 2015 -0400
+
+    Merge branch 'grsec-stable' into grsec-vserver-stable
+
+commit 7dbba86245ec789a322ca2e55baffc7af0958594
+Author: Brad Spengler <spender@grsecurity.net>
+Date:   Sat Jul 4 11:16:00 2015 -0400
+
+    add newer socket families for logging
+
+ grsecurity/gracl_ip.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
 commit 30b82c47d78b39857c6d9d3c389cb136f4549838
 Merge: 1a74d8d a2020f1
 Author: Brad Spengler <spender@grsecurity.net>
